@@ -1,0 +1,43 @@
+# IllustreTonArt
+
+## Description
+
+IllustreTonArt est une plateforme en ligne dédiée à la promotion et à la collaboration des artistes de toutes disciplines, dont les peintres, les designers en bijouterie, les photographes et bien d'autres encore. Notre mission est de créer un espace dynamique où les artistes peuvent exposer leur travail, interagir, et établir des connexions significatives avec des professionnels de l'art et d'autres artistes.
+
+### Principales caractéristiques
+
+- **Galerie d'art en ligne :** Les artistes peuvent créer des galeries virtuelles pour présenter leurs œuvres au monde entier.
+
+- **Blogs artistiques :** Les artistes peuvent rédiger des articles sur leur travail, leurs inspirations et leurs processus artistiques. L'administrateur peut également publier des sujets d'intérêt pour la communauté.
+
+- **Chat en temps réel :** Les utilisateurs peuvent engager des conversations en temps réel pour discuter de l'art, partager des conseils, poser des questions et échanger des idées.
+
+- **Résidences artistiques :** Une carte interactive permet aux artistes de découvrir des programmes de résidence artistique à travers le monde, offrant ainsi des opportunités uniques d'expérimentation et de collaboration.
+
+- **Profils artistiques avancés :** Les artistes peuvent personnaliser leurs profils en ajoutant des informations telles que leur biographie, leur style artistique, leurs influences et leurs liens vers leurs réseaux sociaux.
+
+- **Calendrier d'événements :** Le calendrier répertorie les dates essentielles pour la communauté artistique, y compris les expositions, les appels à projets, les ateliers et bien plus encore.
+
+### Public cible
+
+IllustreTonArt est ouvert à tous les artistes, qu'ils soient débutants ou établis, ainsi qu'aux passionnés d'art qui souhaitent découvrir de nouveaux talents et participer à des discussions artistiques enrichissantes.
+
+## Comment utiliser
+
+1. Clonez ce dépôt sur votre machine locale.
+2. Installez les dépendances avec Composer en exécutant `composer install`.
+3. Configurez votre base de données dans le fichier `.env` et exécutez les migrations avec `php bin/console doctrine:migrations:migrate`.
+4. Lancez le serveur de développement en utilisant `symfony server:start`.
+5. Accédez à votre site à l'adresse `http://localhost:8000`.
+
+## Contributeurs
+
+- [Bousbih Fatouma]() - Fondateur et développeur principal
+
+## Licence
+
+Ce projet est sous licence [nom de la licence] (mettez ici le lien vers le fichier de licence, si nécessaire).
+
+## Contact
+
+Si vous avez des questions, des suggestions ou si vous souhaitez contribuer, n'hésitez pas à nous contacter à [fatouma bousbih@yahoo.fr].
