@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,500&display=swap');
+
+/* page de présentation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Assurez-vous que le nom de la police est correctement orthographié */
+}
+
+body {
+    background-color: #641b4E;
+}
+.logo{
+    
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+section {
+    position: relative;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section .presentation-text {
+    position: relative;
+    max-width: 650px;
+    z-index: 1;
+}
+
+section .presentation-text h1 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+section .presentation-text p { /* "section.content" doit être "section .content" avec un espace entre "section" et ".content" */
+    color: #fff;
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+}
+
+section .presentation-text a { /* De même ici, ajoutez un espace entre "section" et ".content" */
+    color: #fff;
+    background: #f60f20;
+    font-size: 1em;
+    margin: 20px 0;
+    font-weight: 500;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+.image {
+    position: absolute;
+    top: 100px; 
+    right: 60px;
+    opacity: 0;
+    height: 50%;
+    transition: opacity 10s ease-in-out;
+    justify-content: center;
+}
+
+.fade-in {
+    animation: fadeIn 10s linear infinite;
+}
+
+.fade-out {
+    animation: fadeOut 10s linear infinite;
+}
+
+@keyframes fadeIn {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+.menuToggle{
+    position:fixed;
+    top:0;
+    right:0;
+    width:60px;
+    height:60px;
+    background:#ab0b73  url(../images/menu.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+    z-index:1000;
+}
+.menuToggle.active{
+     background:#f60f20  url(../images/close.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+}
+.navigation{
+    position:fixed;
+    top:0;
+   left: calc(100% - 3.8%);
+   height: 100%;
+    background:#efa9d6;
+    z-index:999;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0,25;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li {
+    position: relative;
+    list-style:none;
+    text-align: center;
+}
+.navigation ul li a {
+    font-size: 2.5em;
+    color:#111;
+    text-decoration: none;
+    font-weight:300;
+}
+.navigation ul li a:hover {
+color: #e3219f;
+
+}
+.socialbar{
+    position: absolute;
+    top:0;
+    left:0;
+    width:60px;
+    height: 100%;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.socialbar ul{
+    position: relative;
+    list-style: none;
+}
+.socialbar ul li{
+    position: relative;
+    list-style: none;
+}
+socialbar ul li a{
+    position: relative;
+    display: inline-block;
+}

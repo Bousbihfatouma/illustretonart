@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <section>
+    <div class="logo">
+        <img src="{{ asset('images/logoart.png') }}" alt="Logo du site" width="250" height="100" >
+    </div>
+    <div class="image-container">
+        <img src="{{ asset('../../../images/image1presentation.png') }}" alt="Image 1" class="image fade-out">
+        <img src="{{ asset('../../../images/image2presentation.png') }}" alt="Image 2" class="image fade-in">
+        <img src="{{ asset('../../../images/image3presentation.png') }}" alt="Image 3" class="image fade-out">
+        <img src="{{ asset('../../../images/image4presentation.png') }}" alt="Image 4" class="image fade-in">
+        <img src="{{ asset('../../../images/image5presentation.png') }}" alt="Image 5" class="image fade-out">
+        <img src="{{ asset('../../../images/image6presentation.png') }}" alt="Image 6" class="image fade-in">
+        <img src="{{ asset('../../../images/image7presentation.png') }}" alt="Image 7" class="image fade-out">
+        <img src="{{ asset('../../../images/image8presentation.png') }}" alt="Image 8" class="image fade-in">
+    </div>
+    <div class="presentation-text">
+        <h1>Bienvenue sur IllustreTonArt</h1>
+        <p>Découvrez le talent et la créativité des artistes du monde entier. IllustreTonArt est la plateforme où les artistes, les peintres, les designers en bijouterie, et les photographes se réunissent pour partager leur passion et leur art.</p>
+        <p>Explorez des galeries d'œuvres d'art uniques, lisez des articles inspirants rédigés par nos artistes et participez à des discussions en temps réel avec la communauté.</p>
+        <p>Rejoignez-nous et découvrez un monde de créativité et d'inspiration sur IllustreTonArt.</p>
+        <a href="#">Get Started !</a>
+    </div>
+    <div class="menuToggle" onclick="toggleMenu()"></div>
+    <div class="navigation">
+    
+        <li><a href="#">Artiste peintre</a></li>
+            <ul>
+                <li><a href="#">Article blog</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Galerie</a></li>
+                <li><a href="#">Evénement</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Designer Bijouterie</a></li>
+            <ul>
+                <li><a href="#">Article blog</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">Galerie</a></li>
+                <li><a href="#">Evenement</a></li>
+            </ul>
+       </li>
+       <li><a href="#">Photographie art</a></li>
+             <ul>
+                <li><a href="#">Article blog</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">Galerie</a></li>
+                <li><a href="#">Evenement</a></li>
+            </ul>
+        </li>
+        <div class="socialbar">
+            <ul>
+                <li><a href="#"><img src="../../../images/facebook.png"</a></li>
+                <li><a href="#"><img src="../../../images/twitter.png"</a></li>
+                <li><a href="#"><img src="../../../images/instagram.png"</a></li>
+            </ul>
+        </div>
+    </div>
+
+     <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll(".image");
+                let currentIndex = 0;
+
+                function toggleImages() {
+                    images[currentIndex].classList.toggle("fade-in");
+                    images[currentIndex].classList.toggle("fade-out");
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.toggle("fade-in");
+                    images[currentIndex].classList.toggle("fade-out");
+                }
+
+                // Démarrez le changement d'images
+                setInterval(toggleImages, 3000); // Changez d'image toutes les 3 secondes (ajustez selon vos préférences)
+            });
+        </script>
+        <script type="text/javascript">
+        function togglemenu(){
+            var menuToggle = document.querySelector('.menuToggle');
+            menuToggle.classList.toggle('active')
+        }
+
+        </script>
+    </section>    
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

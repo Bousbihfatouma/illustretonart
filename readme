@@ -30,13 +30,16 @@ IllustreTonArt est ouvert à tous les artistes, qu'ils soient débutants ou éta
 4. Lancez le serveur de développement en utilisant `symfony server:start`.
 5. Accédez à votre site à l'adresse `http://localhost:8000`.
 
+## Pré requis
+
+
 ## Contributeurs
 
 - [Bousbih Fatouma]() - Fondateur et développeur principal
 
 ## Licence
 
-Ce projet est sous licence [nom de la licence] (mettez ici le lien vers le fichier de licence, si nécessaire).
+Ce projet est sous licence
 
 ## Contact
 
