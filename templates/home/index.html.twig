@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 {% block body %}
- 
+  <div id="home-page">
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-info navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-info navbar-dark">
     <!-- Container wrapper -->
     <div class="container-fluid">
         <!-- Navbar brand -->
         <div class="logohome">
-            <img src="{{ asset('images/logoart.png') }}" alt="Logo du site" width="300" height="100">
+            <img src="{{ asset('images/logoart.png') }}" alt="Logo du site" width="500" height="200">
         </div>
         <!-- Navigation Links -->
         <ul class="navbar-nav me-auto">
@@ -123,11 +123,7 @@
           Votre créativité est notre passion. ✨
            Rejoignez-nous pour grandir ensemble."
 
-
-
-
-
-          </p>
+</p>
         </div>
         <!-- Grid column -->
 
@@ -194,12 +190,11 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-    © 2023 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
+    
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+</div>
     
   {% endblock %}
         
