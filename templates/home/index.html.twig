@@ -71,16 +71,32 @@
     </div>
     <!-- Container wrapper -->
 </nav>
-
-
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-white text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    
-
-
+<!-- slidder-->
+    <div class="slider">
+      <div class="slide">
+        <img src="{{ asset('../../../images/slide1.png') }}"/>
+        <p>01</p>
+      </div>
+      <div class="slide2">
+        <img src="{{ asset('../../../images/slidereseau.png') }}"/>
+        <p>02</p>
+      </div>
+      <div class="slide">
+      <img src="{{ asset('../../../images/slide3.png') }}"/>
+        <p>03</p>
+      </div>
+      <div class="slide2">
+       <img src="{{ asset('../../../images/slide4.png') }}"/>
+      </div>
+      <div class="slide">
+       <img src="{{ asset('../../../images/slide4.png') }}"/>
+        <p>05</p>
+      </div>
+      <div class="slide2">
+       <img src="{{ asset('../../../images/slide5.png') }}"/>
+        <p>06</p>
+      </div>
+    </div>
     <!-- Right -->
     <div>
       <a href="" class="me-4 link-secondary">
@@ -176,7 +192,7 @@
           <p><i class="fas fa-home me-3 text-secondary"></i> Paris France</p>
           <p>
             <i class="fas fa-envelope me-3 text-secondary"></i>
-            info@example.com
+            fatoumabousbih@yahoo.fr
           </p>
           <p><i class="fas fa-phone me-3 text-secondary"></i> 0625766296</p>
           
@@ -188,12 +204,31 @@
   </section>
   <!-- Section: Links  -->
 
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-    
-  <!-- Copyright -->
+ 
 </footer>
 <!-- Footer -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{ asset('node_modules/slick-carousel/slick1.8.1/slick.min.js') }}"></script>
+
+
+
+
+
+
+<script>
+ $(document).ready(function() {
+            $('.slider').slick({
+                infinite: true,
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                fade: true,
+                fadeSpeed: 1000,
+            });
+        });
+</script>
 </div>
     
   {% endblock %}
