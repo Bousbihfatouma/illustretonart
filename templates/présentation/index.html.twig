@@ -3,11 +3,12 @@
 
 
 {% block body %}
+  <div id="presentation-page">
     <section>
-    <div class="logo">
-        <img src="{{ asset('images/logoart.png') }}" alt="Logo du site" width="250" height="100" >
-    </div>
-    <div class="image-container">
+        <div class="logopresentation">
+            <img src="{{ asset('images/logoart.png') }}" alt="Logo du site" width="250" height="100" >
+        </div>
+        <div class="image-container">
         <img src="{{ asset('../../../images/image1presentation.png') }}" alt="Image 1" class="image fade-out">
         <img src="{{ asset('../../../images/image2presentation.png') }}" alt="Image 2" class="image fade-in">
         <img src="{{ asset('../../../images/image3presentation.png') }}" alt="Image 3" class="image fade-out">
@@ -22,7 +23,8 @@
         <p>Découvrez le talent et la créativité des artistes du monde entier. IllustreTonArt est la plateforme où les artistes, les peintres, les designers en bijouterie, et les photographes se réunissent pour partager leur passion et leur art.</p>
         <p>Explorez des galeries d'œuvres d'art uniques, lisez des articles inspirants rédigés par nos artistes et participez à des discussions en temps réel avec la communauté.</p>
         <p>Rejoignez-nous et découvrez un monde de créativité et d'inspiration sur IllustreTonArt.</p>
-        <a href="#">Get Started !</a>
+       <a href="{{ path('app_home') }}">Get Started !</a>
+
     </div>
     <div class="menuToggle" onclick="toggleMenu()"></div>
     <div class="navigation">
@@ -84,7 +86,8 @@
         }
 
         </script>
-    </section>    
+    </section>  
+    </div>  
 {% endblock %}
 
 

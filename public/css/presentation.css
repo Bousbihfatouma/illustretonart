@@ -5,17 +5,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif; /* Assurez-vous que le nom de la police est correctement orthographié */
+    font-family: "Poppins", sans-serif; 
 }
-
-body {
+/* Styles spécifiques à la page de présentation */
+  #presentation-page {
     background-color: #641b4E;
 }
-.logo{
-    
-    position:absolute;
+ .logopresentation {
+    position: absolute;
     top: 0;
     left: 0;
+   
 }
 
 section {
