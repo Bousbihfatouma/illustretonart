@@ -5,8 +5,10 @@ namespace App\Entity;
 use App\Repository\GalerieRepository;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\User;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 #[ORM\Entity(repositoryClass: GalerieRepository::class)]
+
 class Galerie
 {
     #[ORM\Id]
