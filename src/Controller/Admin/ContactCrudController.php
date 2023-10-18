@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Contact;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
@@ -42,7 +42,7 @@ class ContactCrudController extends AbstractCrudController
         return [
             IdField::new('id')
                 ->hideOnIndex(),
-            TextField::new('fullName'),
+            TextField::new('nom'),
             TextField::new('email'),
             TextareaField::new('message')
                 ->setFormType(CKEditorType::class)

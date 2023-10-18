@@ -1,0 +1,5 @@
+easy_admin:
+    entities:
+        Contact:
+            class: App\Entity\Contact
+            controller: App\Controller\Admin\ContactCrudController

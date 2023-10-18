@@ -8,9 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
  use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
  use Symfony\Component\HttpFoundation\Request;
- 
-
-use App\Entity\User;
+ use App\Entity\User;
 
 
 class SecurityController extends AbstractController

@@ -54,12 +54,27 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
 
-        yield MenuItem::section('User','fa fa-User');
+        yield MenuItem::section('User','fa fa-person');
 
-        yield MenuItem::subMenu('Actions', 'fas fa-bars')->setSubItems([
+        yield MenuItem::subMenu('UserActions', 'fas fa-bars')->setSubItems([
             MenuItem::linkToCrud('Create User', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW),
             MenuItem::linkToCrud('Show User', 'fas fa-eye', User::class)
+
         ]);
 
+        yield MenuItem::section('Contact','fa fa-envelope');
+
+
+        yield MenuItem::subMenu('ContactActions', 'fas fa-bars')->setSubItems([
+            MenuItem::linkToCrud('Create Contact', 'fas fa-plus', Contact::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Show Contact', 'fas fa-eye', Contact::class)
+        ]);
+          #yield MenuItem::section('blog','fa fa-journal');
+
+
+        #yield MenuItem::subMenu('blogActions', 'fas fa-bars')->setSubItems([
+            #MenuItem::linkToCrud('Create blog', 'fas fa-plus', blog::class)->setAction(Crud::PAGE_NEW),
+            #MenuItem::linkToCrud('Show Contact', 'fas fa-eye', blog::class)
+        #]);
     }
 }
