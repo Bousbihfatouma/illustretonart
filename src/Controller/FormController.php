@@ -15,28 +15,17 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class FormController extends AbstractController
 {
-    #[Route('/form', name: 'app_form')]
+  #[Route('/form', name: 'app_form')]
     public function index(): Response
     {
         return $this->render('form/index.html.twig', [
             'controller_name' => 'FormController',
         ]);
     }
-   
-
-        public function buildForm(FormBuilderInterface $builder, array $options)
-        {
-                $builder
-                        ->add('username')
-                        // suppression du role qui sera défini par défaut
-                        ->add('password', PasswordType::class)
-                ;
-        }
-
         public function configureOptions(OptionsResolver $resolver)
         {
                 $resolver->setDefaults([
-                'data_class' => Utilisateur::class,
+                'data_class' => User::class,
                 ]);
         }
 }

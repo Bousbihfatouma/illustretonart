@@ -42,7 +42,7 @@ class ContactCrudController extends AbstractCrudController
         return [
             IdField::new('id')
                 ->hideOnIndex(),
-            TextField::new('nom'),
+            TextField::new('fullName'),
             TextField::new('email'),
             TextareaField::new('message')
                 ->setFormType(CKEditorType::class)

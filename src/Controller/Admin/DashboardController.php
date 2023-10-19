@@ -4,6 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use App\Entity\Contact;
+use App\Entity\Blog;
+use App\Entity\Galerie;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -58,7 +60,8 @@ class DashboardController extends AbstractDashboardController
 
         yield MenuItem::subMenu('UserActions', 'fas fa-bars')->setSubItems([
             MenuItem::linkToCrud('Create User', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW),
-            MenuItem::linkToCrud('Show User', 'fas fa-eye', User::class)
+            MenuItem::linkToCrud('Show User', 'fas fa-eye', User::class),
+             MenuItem::linkToCrud('Edit User', 'fas fa-edit', User::class)->setAction(Crud::PAGE_EDIT)
 
         ]);
 
@@ -67,14 +70,29 @@ class DashboardController extends AbstractDashboardController
 
         yield MenuItem::subMenu('ContactActions', 'fas fa-bars')->setSubItems([
             MenuItem::linkToCrud('Create Contact', 'fas fa-plus', Contact::class)->setAction(Crud::PAGE_NEW),
-            MenuItem::linkToCrud('Show Contact', 'fas fa-eye', Contact::class)
+            MenuItem::linkToCrud('Show Contact', 'fas fa-eye', Contact::class),
+            MenuItem::linkToCrud('Edit Contact', 'fas fa-edit', Contact::class)->setAction(Crud::PAGE_EDIT)
+
         ]);
-          #yield MenuItem::section('blog','fa fa-journal');
+
+        yield MenuItem::section('Blog','fa fa-pencil');
 
 
-        #yield MenuItem::subMenu('blogActions', 'fas fa-bars')->setSubItems([
-            #MenuItem::linkToCrud('Create blog', 'fas fa-plus', blog::class)->setAction(Crud::PAGE_NEW),
-            #MenuItem::linkToCrud('Show Contact', 'fas fa-eye', blog::class)
-        #]);
+        yield MenuItem::subMenu('BlogActions', 'fas fa-bars')->setSubItems([
+             MenuItem::linkToCrud('Create Blog', 'fas fa-plus', Blog::class)->setAction(Crud::PAGE_NEW),
+             MenuItem::linkToCrud('Show Blog', 'fas fa-eye', Blog::class),
+             MenuItem::linkToCrud('Edit Blog', 'fas fa-edit', Blog::class)->setAction(Crud::PAGE_EDIT)
+
+        ]);
+
+        yield MenuItem::section('Galerie','fa fa-images');
+
+
+        yield MenuItem::subMenu('GalerieActions', 'fas fa-bars')->setSubItems([
+             MenuItem::linkToCrud('Create Galerie', 'fas fa-plus', Galerie::class)->setAction(Crud::PAGE_NEW),
+             MenuItem::linkToCrud('Show Galerie', 'fas fa-eye', Galerie::class),
+             MenuItem::linkToCrud('Edit Galerie', 'fas fa-edit', Galerie::class)->setAction(Crud::PAGE_EDIT)
+
+        ]);
     }
 }

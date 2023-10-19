@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="registration-form">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Inscris-toi!</h1>
+                {{ form_errors(registrationForm) }}
+                {{ form_start(registrationForm) }}
+
+                {{ form_row(registrationForm.email, {
+                    attr: {
+                        class: 'form-control',
+                        placeholder: 'Email'
+                    }
+                }) }}
+
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Mot de passe',
+                    attr: {
+                        class: 'form-control',
+                        placeholder: 'Mot de passe'
+                    }
+                }) }}
+
+                <!-- Ajoutez une rubrique pour le domaine -->
+                <div class="form-group">
+                    <label for="domaine">Tu es de quel domaine ?</label>
+                    <select id="domaine" name="domaine" class="form-control">
+                        <option value="designer_bijouterie">Designer bijouterie</option>
+                        <option value="artiste_peintre">Artiste peintre</option>
+                        <option value="photographe">Photographe</option>
+                    </select>
+                </div>
+
+                {{ form_row(registrationForm.agreeTerms, {
+                    label: 'J\'accepte les termes et conditions',
+                    attr: {
+                        class: 'form-check-input'
+                    }
+                }) }}
+
+                <button type="submit" class="btn btn-primary">S'inscrire</button>
+                {{ form_end(registrationForm) }}
+            </div>
+            <div class="col-md-6">
+                  <img src="{{ asset('../../../images/inscrittoi.png') }}" width="800" height="200" alt="Image" class="img-fluid"/>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+                
+
