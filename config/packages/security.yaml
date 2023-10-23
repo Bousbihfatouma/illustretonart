@@ -28,6 +28,11 @@ security:
                 path: /
                 always_remember_me: true
 
+            #form_login:
+                # Configurez ici votre formulaire de connexion
+                #default_target_path: app_espacepersonnel # Définissez la redirection après la connexion  
+                #entry_point: form_login  # Définissez l'authentificateur d'entrée
+
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
 
@@ -36,9 +41,9 @@ security:
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
-    access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        #access_control:
+         #- { path: ^/admin, roles: ROLE_ADMIN }
+         #- { path: ^/profile, roles: ROLE_USER }
 
 when@test:
     security:
