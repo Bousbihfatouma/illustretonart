@@ -3,3 +3,9 @@ easy_admin:
         Contact:
             class: App\Entity\Contact
             controller: App\Controller\Admin\ContactCrudController
+        Blog:
+            class: App\Entity\Blog
+            list:
+                actions:
+                    - ['index', 'app_blog']
+        
