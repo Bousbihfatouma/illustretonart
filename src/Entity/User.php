@@ -38,24 +38,22 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255 ,nullable: true)]
     private ?string $prenom = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255,nullable: true)]
     private ?string $nom = null;
 
-    #[ORM\Column(type: Types::TEXT)]
+    #[ORM\Column(type: Types::TEXT,nullable: true)]
     private ?string $aPropos = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255,nullable: true)]
     private ?string $instagram = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $created_at = null;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
-    private ?galerie $galerie = null;
-
+   
     public function getId(): ?int
     {
         return $this->id;
@@ -208,17 +206,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         ]);
     }
 
-  public function getGalerie(): ?galerie
-  {
-      return $this->galerie;
-  }
-
-  public function setGalerie(?galerie $galerie): static
-  {
-      $this->galerie = $galerie;
-
-      return $this;
-  }
 }
 
 

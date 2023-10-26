@@ -8,4 +8,7 @@ easy_admin:
             list:
                 actions:
                     - ['index', 'app_blog']
-        
+                fields:
+                    - title
+                    - content
+                    - image

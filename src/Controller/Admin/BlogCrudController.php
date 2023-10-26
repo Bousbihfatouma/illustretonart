@@ -39,6 +39,8 @@ class BlogCrudController extends AbstractCrudController
         return [
             IdField::new('id'),
             TextField::new('image'),
+             TextField::new('title'),  // Ajout du champ 'title'
+             TextEditorField::new('content'),
       
         ];
     }

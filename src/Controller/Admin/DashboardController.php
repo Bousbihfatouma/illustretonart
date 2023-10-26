@@ -84,7 +84,7 @@ class DashboardController extends AbstractDashboardController
              MenuItem::linkToCrud('Edit Blog', 'fas fa-edit', Blog::class)->setAction(Crud::PAGE_EDIT)
 
         ]);
-
+       
         yield MenuItem::section('Galerie','fa fa-images');
 
 
