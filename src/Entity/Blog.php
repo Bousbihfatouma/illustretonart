@@ -62,4 +62,21 @@ class Blog
 
         return $this;
     }
+    // Ajoutez des getters et setters pour le champ "category"
+  #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private ?string $category; // Champ category ajouté ici
+
+    // Les autres méthodes existantes de votre entité Blog
+
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(string $category): static
+    {
+        $this->category = $category;
+
+        return $this;
+    }
 }

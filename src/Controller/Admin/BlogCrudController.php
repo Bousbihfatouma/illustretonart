@@ -37,10 +37,12 @@ class BlogCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
+            IdField::new('id')->onlyOnDetail(),
             TextField::new('image'),
              TextField::new('title'),  // Ajout du champ 'title'
              TextEditorField::new('content'),
+             TextField::new('category'),
+
       
         ];
     }

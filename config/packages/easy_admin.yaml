@@ -12,3 +12,22 @@ easy_admin:
                     - title
                     - content
                     - image
+                    - category
+            form:
+                fields:
+                    - image
+                    - title
+                    - content
+                    - category
+            edit:
+                fields:
+                    - id
+                    - image
+                    - title
+                    - content
+                    - category
+        Galerie:
+            class: App\Entity\Galerie
+            list:
+                actions:
+                    - { name: 'listeNomsPrenoms', label: 'Liste Noms et Prénoms' }        

@@ -1,38 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GaleriebijouxController!{% endblock %}
+
 
 {% block body %}
 
 <h1 class="page-title">Sélectionne la catégorie de designer </h1>
 
 <div class="card-deck">
-  
   <div class="card">
-    <img class="card-img-top"src="{{ asset('../../../images/designerinformatique.jpg') }}" alt="Card image cap">
+    <img class="card-img-top" src="{{ asset('images/designerinformatique.jpg') }}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Designer bijouterie digital</h5>
-      <p class="card-text">Laissez-vous emporter par la diversité des œuvres, des motifs et des matériaux, et découvrez l'art de la bijouterie à l'ère numérique. De l'innovation au raffinement, cette galerie est un reflet de la vision et de la passion de ces artistes, prêts à vous émerveiller avec leurs créations uniques  Chaque création incarne l'équilibre délicat entre l'ancien et le moderne, fusionnant des techniques traditionnelles avec une esthétique contemporaine pour produire des bijoux qui transcendent le temps et l'espace. Explorez cette vitrine exceptionnelle de bijouterie numérique et plongez dans un monde où l'art se réinvente à chaque bijou.</p>
+      <h5 class="card-title">
+        <a href="{{ path('app_galeriedigitalbijoux') }}" >Designer bijouterie digital</a>
+      </h5>
+      <p class="card-text">Laissez-vous emporter par la diversité des œuvres, des motifs et des matériaux, et découvrez l'art de la bijouterie à l'ère numérique. De l'innovation au raffinement, cette galerie est un reflet de la vision et de la passion de ces artistes, prêts à vous émerveiller avec leurs créations uniques. Chaque création incarne l'équilibre délicat entre l'ancien et le moderne, fusionnant des techniques traditionnelles avec une esthétique contemporaine pour produire des bijoux qui transcendent le temps et l'espace. Explorez cette vitrine exceptionnelle de bijouterie numérique et plongez dans un monde où l'art se réinvente à chaque bijou.</p>
       <p class="card-text"><small class="text-muted"></small></p>
     </div>
   </div>
+
   <div class="card">
-    <img class="card-img-top"src="{{ asset('../../../images/dessintechnique.jpg') }}" alt="Card image cap">
+    <img class="card-img-top" src="{{ asset('images/dessintechnique.jpg') }}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">designer bijouterie</h5>
+      <h5 class="card-title">
+        <a href="#">Designer bijouterie</a>
+      </h5>
       <p class="card-text">Les designers de bijouterie qui s'expriment sur du papier démontrent une connexion profonde entre l'art et la tradition. Avec chaque coup de crayon, ils capturent l'essence de la beauté et de l'élégance, créant des bijoux empreints d'une touche personnelle et d'un artisanat exceptionnel. Le papier devient leur toile, où chaque ligne et chaque détail racontent une histoire unique. Dans cette fusion de créativité et de patience, ces artistes dessinent des pièces intemporelles, célébrant l'art ancestral de la bijouterie tout en insufflant une touche contemporaine. Chaque bijou sur papier est une œuvre d'art en soi, prête à être transformée en une réalité éblouissante et à devenir le reflet de l'âme de son créateur.</p>
       <p class="card-text"><small class="text-muted"></small></p>
     </div>
   </div>
+
   <div class="card">
-    <img class="card-img-top" src="{{ asset('../../../images/bijouxreel.jpg') }}" alt="Card image cap">
+    <img class="card-img-top" src="{{ asset('images/bijouxreel.jpg') }}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Les designers et leurs bijoux créés...</h5>
+      <h5 class="card-title">
+        <a href="#">Les designers et leurs bijoux créés...</a>
+      </h5>
       <p class="card-text">Les designers et leurs bijoux créés incarnent une fusion enchanteresse de l'ingéniosité artistique et de l'expertise méticuleuse, chaque pièce racontant une histoire unique, reflétant le dévouement passionné de ces créateurs à leur métier. Ces bijoux ne sont pas simplement des ornements, mais des œuvres d'art qui célèbrent la beauté, l'élégance et l'individualité, tout en capturant l'essence même de la créativité et de l'innovation dans le monde de la bijouterie. Leurs créations incarnent des moments intimes, des souvenirs précieux et des émotions profondes, tout en mettant en lumière l'ingéniosité artistique de ces maîtres de la bijouterie, qui nous invitent à plonger dans un univers d'émotions et d'esthétique.</p>
       <p class="card-text"><small class="text-muted"></small></p>
     </div>
   </div>
 </div>
-
-
 {% endblock %}
