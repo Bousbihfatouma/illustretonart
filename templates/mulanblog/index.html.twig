@@ -1,0 +1,291 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello JosephineblogController!{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>article fatouma</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy&amp;display=swap">
+    <!-- gLightbox CSS-->
+    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">                   
+      <nav class="navbar navbar-expand-lg navbar-light py-4 index-forward bg-white">
+        <div class="container d-flex justify-content-center justify-content-lg-between align-items-center">
+          <ul class="list-inline small mb-0 text-dark d-none d-lg-block">
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+          </ul><a class="navbar-brand" href="index.html"> <img src="{{ asset('images/logoart.png') }}" alt="Logo du site" width="500" height="200"></a><a class="reset-anchor text-sm mb-0 h6 d-none d-lg-block" href="mailto:Juliette@email.com"><i class="far fa-envelope me-2 text-primary"></i>contactillustretonart@email.com</a>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light border-top border-bottom border-light">
+        <div class="container">
+          <ul class="list-inline small mb-0 text-dark d-block d-lg-none">
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <!-- Navbar link--><a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="listingVariants" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog Listing</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="listingVariants"><a class="dropdown-item" href="listing-1.html">Post column</a><a class="dropdown-item" href="listing-2.html">Post row</a></div>
+              </li>
+              <li class="nav-item">
+                <!-- Navbar link--><a class="nav-link active" href="post.html">Blogpost</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pages" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="pages"><a class="dropdown-item" href="index.html">Home</a><a class="dropdown-item" href="listing-1.html">Listing</a><a class="dropdown-item" href="post.html">Post</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row text-center">
+          <div class="col-lg-8 mx-auto"><a class="category-link mb-3 d-inline-block" href="#!">Inspiration</a>
+            <h1>"Symphonie de Tradition et de Modernité : Les Bijoux Mulan, un Hommage Créatif à l'Art de la Joaillerie Japonaise"</h1>
+            <p>Les bijoux Mulan incarnent l'âme du Japon, alliant avec grâce la tradition millénaire à l'innovation contemporaine. Chaque pièce est le résultat d'un dévouement inébranlable pour l'artisanat japonais, transmettant des techniques héritées de générations en générations. Ces bijoux reflètent la richesse de la culture et de l'histoire japonaises, tout en apportant une touche de modernité à travers des designs ingénieux. En portant un bijou Mulan, vous devenez le gardien d'un précieux héritage, tout en embrassant l'élégance intemporelle adaptée à notre époque. Laissez Mulan vous emmener dans un voyage alliant tradition et modernité, où chaque bijou raconte une histoire de beauté, de raffinement et d'innovation.</p>
+            <ul class="list-inline mb-5">
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#!">BY administrateur du site</a></li>
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#!">25 octobre 2023</a></li>
+            </ul>
+          </div>
+        </div><img class="w-100 mb-5" src="{{ asset('../../../images/bijouxvintage.jpg') }}"  alt="...">
+        <div class="row gy-5">
+          <div class="col-lg-9">
+            <p class="lead drop-caps mb-5">Les bijoux vintage de l'Atelier de Joséphine sont de véritables trésors du passé, méticuleusement restaurés et réimaginés pour apporter une touche d'élégance intemporelle à votre style. Chaque pièce raconte une histoire, capturant l'essence de l'artisanat d'époque dans des créations uniques. Notre collection de bijoux vintage comprend des bagues, des colliers, des boucles d'oreilles et des broches, chaque pièce étant soigneusement sélectionnée pour sa beauté et son authenticité. Que vous soyez passionné par l'Art Nouveau, le style Art Déco, ou que vous préfériez l'esthétique romantique des bijoux victoriens, notre atelier offre une gamme diversifiée qui séduira les amateurs de vintage et les collectionneurs. Chaque bijou est une invitation à revivre le charme d'une époque révolue tout en ajoutant une touche d'élégance intemporelle à votre look moderne.</p>
+            <h2>Émerveillez-vous devant les Trésors Intemporels de Joséphine : Une Collection d'Œuvres d'Art à Couper le Souffle</h2>
+            <p class="mb-4">"Voyagez à travers le temps avec des créations qui ramènent le vintage à notre époque."</p>
+            <div class="row">
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/2jpg.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/bijouxchanel.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/6.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/4.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/pub2.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/vintage.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/3.jpg') }}" alt=""></a></div>
+                <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/pubjpg.jpg') }}" alt=""></a></div>
+            </div>
+            <p class="text-muted mb-4">La collection de Joséphine est un véritable voyage dans le temps, capturant l'essence du vintage et la fusionant avec la modernité. Chaque pièce est un trésor intemporel, restauré avec soin et habilement réimaginé pour apporter une touche d'élégance à notre époque. Des bijoux exquis aux œuvres d'art éblouissantes, cette collection présente un éventail diversifié de créations qui ravivent l'art éternel. Plongez dans un monde où l'authenticité du passé se marie harmonieusement avec le présent, créant une expérience artistique inoubliable.</p>
+            <h3>Ce qui faut retenir</h3>
+            <ul class="list-bullets mb-5">
+              <li>Les bijoux de Joséphine incarnent la beauté intemporelle du vintage, soigneusement restaurés et réinventés pour évoquer une élégance moderne. </li>
+              <li>Chaque pièce raconte une histoire unique, embrassant des époques passées tout en s'adaptant parfaitement à notre monde contemporain. </li>
+              <li>Cette collection diversifiée offre une sélection minutieuse de bagues, de colliers, de boucles d'oreilles et de broches, témoignant de l'artisanat d'antan et de la grâce des époques révolues</li>
+              <li>En portant ces bijoux, vous embrasserez le charme du passé tout en ajoutant une touche d'élégance intemporelle à votre style personnel></li>
+            </ul>
+            <figure class="bg-light p-4 p-lg-5 text-center mb-5">
+              <blockquote class="blockquote">
+                <p class="h4 mb-5">Chaque bijou que je crée est une fenêtre ouverte sur l'âme du passé, un témoignage vivant de l'art et de l'histoire qui traverse le temps. </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                <cite class="fst-normal" title="Source Title">Joséphine</cite>
+              </figcaption>
+            </figure>
+            <p class="mb-5">Le blog de Joséphine est une fenêtre sur un monde où le vintage rencontre la modernité, où l'artisanat et l'histoire se mêlent pour créer des trésors intemporels. Les articles et les récits captivants de ce blog explorent la passion de Joséphine pour la préservation de l'authenticité du passé tout en l'adaptant au monde contemporain. Il offre des informations précieuses sur la restauration et la réimagination d'objets anciens, ainsi que des inspirations pour intégrer le charme du vintage dans nos vies modernes. Que vous soyez amateur d'antiquités, collectionneur ou simplement passionné par le riche héritage de l'artisanat, le blog de Joséphine vous transporte dans un univers où l'art et l'histoire perdurent avec élégance." </p>
+            <!-- Post tags-->
+            <div class="d-flex align-items-center flex-column flex-sm-row mb-4 p-4 bg-light">
+              <h3 class="h4 mb-3 mb-sm-0">Tags</h3>
+              <ul class="list-inline mb-0 ms-0 ms-sm-3">
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Art</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">designerjewelry</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">vintage</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">fashion</a></li>
+              </ul>
+            </div>
+            <!-- Post share-->
+            <div class="d-flex align-items-center flex-column flex-sm-row mb-5 p-4 bg-light">
+              <h3 class="h4 mb-3 mb-sm-0">Share this post</h3>
+              <ul class="list-inline mb-0 ms-0 ms-sm-3">
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share facebook" href="#!"><i class="fab me-2 fa-facebook-f"></i>Share</a></li>
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share twitter" href="#!"><i class="fab me-2 fa-twitter"></i>Tweet</a></li>
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share instagram" href="#!"><i class="fab me-2 fa-instagram"></i>Share</a></li>
+              </ul>
+            </div>
+            <!-- Leave comment-->
+            <h3 class="h4 mb-4">Leave a comment</h3>
+            <form class="mb-5">
+              <div class="row gy-3">
+                <div class="col-lg-6">
+                  <input class="form-control" type="text" name="name" placeholder="Full Name e.g. Jason Doe">
+                </div>
+                <div class="col-lg-6">
+                  <input class="form-control" type="email" name="email" placeholder="Email Address e.g. Jason@email.com">
+                </div>
+                <div class="col-lg-12">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Leave your message"></textarea>
+                </div>
+                <div class="col-lg-12">
+                  <button class="btn btn-primary" type="submit">Submit your comment</button>
+                </div>
+              </div>
+            </form>
+            <!-- Post comments-->
+            <h3 class="h4 mb-4">Comments</h3>
+            <ul class="list-unstyled comments">
+              <li>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-1.jpg" alt="Jimmy Roy" width="60"/></div>
+                  <div class="ms-3">
+                    <p class="small mb-0 text-primary fw-normal">15 Aug 2019</p>
+                    <h5>Jimmy Roy</h5>
+                    <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                  </div>
+                </div>
+                <ul class="list-unstyled ms-5">
+                  <li> 
+                    <div class="d-flex mb-4">
+                      <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-2.jpg" alt="Melissa Johanson" width="60"/></div>
+                      <div class="ms-3">
+                        <p class="small mb-0 text-primary fw-normal">15 Sep 2019</p>
+                        <h5>Melissa Johanson</h5>
+                        <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-3.jpg" alt="David Nguyen" width="60"/></div>
+                  <div class="ms-3">
+                    <p class="small mb-0 text-primary fw-normal">10 Oct 2019</p>
+                    <h5>David Nguyen</h5>
+                    <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Blog sidebar-->
+          <div class="col-lg-3">
+            <!-- About category-->
+            <div class="card bg-light mb-4 py-lg-4">
+              <div class="card-body text-center">
+                <h2 class="h3 mb-3">About me</h2><img class="rounded-circle mb-3" src="{{ asset('../../../images/josephine.jpg') }}" alt="..." width="100">
+                <p class="text-sm text-muted">"Bonjour, je suis Joséphine, une amoureuse du vintage et une passionnée de l'artisanat. Mon monde est un mélange de passé et de présent, où je m'efforce de préserver et de réinventer le charme intemporel des époques révolues. Mon atelier est mon sanctuaire, un lieu où chaque objet raconte une histoire, un lieu où l'art, l'histoire et la créativité se rejoignent pour créer des trésors intemporels. À travers ce blog, je partage ma quête pour l'authenticité et la beauté du vintage, ainsi que mon exploration de l'art de réimaginer le passé dans un monde moderne. Rejoignez-moi pour un voyage captivant à travers les époques, où l'élégance classique rencontre la vie contemporaine, et où chaque création est une déclaration d'amour à l'artisanat d'antan. Bienvenue dans mon univers, où le vintage prend une nouvelle vie à notre époque."</p>
+                <ul class="list-inline small mb-0 text-dark">
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Recent posts-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Recent posts</h2>
+                <div class="d-flex mb-3"><a class="flex-shrink-0" href="post.html"><img class="img-fluid" src="img/recent-post-1.jpg" alt="" width="70"></a>
+                  <div class="ms-3">
+                    <h6> <a class="reset-anchor" href="post.html">Crazy goodness</a></h6>
+                    <p class="text-sm text-muted lh-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+                <div class="d-flex mb-3"><a class="flex-shrink-0" href="post.html"><img class="img-fluid" src="img/recent-post-2.jpg" alt="" width="70"></a>
+                  <div class="ms-3">
+                    <h6> <a class="reset-anchor" href="post.html">Black hat</a></h6>
+                    <p class="text-sm text-muted lh-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+                <div class="d-flex mb-3"><a class="flex-shrink-0" href="post.html"><img class="img-fluid" src="img/recent-post-3.jpg" alt="" width="70"></a>
+                  <div class="ms-3">
+                    <h6> <a class="reset-anchor" href="post.html">My office makeover</a></h6>
+                    <p class="text-sm text-muted lh-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Trending categories</h2><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-1.jpg)" href="#!"><span class="category-block-title">Interior Design</span></a><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-2.jpg)" href="#!"><span class="category-block-title">Fashion</span></a><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-3.jpg)" href="#!"><span class="category-block-title">Tips &amp; Tricks</span></a>
+              </div>
+            </div>
+            <!-- Tags-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Tags cloud</h2>
+                <ul class="list-inline">
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Art</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">designer</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">bijouterie</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">jewelry</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">desert</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Inspiration</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Business</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Ad-->
+            <div class="card mb-4">
+              <div class="card-body p-0"><a class="d-block" href="#!"><img class="img-fluid" src="img/banner.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-4" style="background: #111">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-lg-start"><img src="img/logo-footer.svg" alt="..." width="120"></div>
+          <div class="col-md-4 text-center">
+            <div class="d-flex align-items-center flex-wrap justify-content-center">
+              <h6 class="text-muted mb-0 py-2 me-3">Follow me<span class="ms-3">-</span></h6>
+              <ul class="list-inline small mb-0 text-white">
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 text-lg-end">
+            <p class="mb-0 text-muted text-sm text-heading">Template designed by <a href="https://bootstrapious.com/p/juliette-bootstrap-feminine-blog-template" class="text-primary">Bootstrapious</a>. </p>
+            <!-- If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!-->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="js/front.js"></script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>
+
+
+
+{% endblock %}

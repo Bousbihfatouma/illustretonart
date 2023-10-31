@@ -11,6 +11,13 @@ import './js/front';
 import './js/demo';
 import './js/js-cookie';
 import './js/boostrap.js';
+import './js/boostraphome.js';
+import './js/jqueryhome.js';
+import './js/aos.js';
+import './js/isotope-layout.js';
+import './js/venobox.js';
+import './js/waypoints.js';
+import './js/counterup.js';
 
 // start the Stimulus application
 import './bootstrap';
