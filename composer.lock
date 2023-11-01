@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2989e38f8fb9983df2db837647efb48d",
+    "content-hash": "1b3710c510d2e8782cb9cc297d3486c5",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1398,16 +1398,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v4.7.7",
+            "version": "v4.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "7561f781aa8ac7852a18938711052fffb641005c"
+                "reference": "f9e50a3bdcee3194d332525e52d3c064eb5cf1c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/7561f781aa8ac7852a18938711052fffb641005c",
-                "reference": "7561f781aa8ac7852a18938711052fffb641005c",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/f9e50a3bdcee3194d332525e52d3c064eb5cf1c0",
+                "reference": "f9e50a3bdcee3194d332525e52d3c064eb5cf1c0",
                 "shasum": ""
             },
             "require": {
@@ -1480,7 +1480,7 @@
             ],
             "support": {
                 "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
-                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.7.7"
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.8.3"
             },
             "funding": [
                 {
@@ -1488,7 +1488,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-19T18:35:59+00:00"
+            "time": "2023-10-29T19:21:38+00:00"
         },
         {
             "name": "egulias/email-validator",
