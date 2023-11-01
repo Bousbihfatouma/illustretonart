@@ -6,6 +6,7 @@ use App\Entity\Blog;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
@@ -41,7 +42,7 @@ class BlogCrudController extends AbstractCrudController
             TextField::new('image'),
              TextField::new('title'),  // Ajout du champ 'title'
              TextEditorField::new('content'),
-             TextField::new('category'),
+             Field::new('category'),
 
       
         ];

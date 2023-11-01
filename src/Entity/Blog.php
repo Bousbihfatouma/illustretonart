@@ -22,6 +22,13 @@ class Blog
     #[ORM\Column(type: 'text')]
     private ?string $content;
 
+    #[ORM\Column]
+    private ?bool $online = null;
+
+    #[ORM\ManyToOne(inversedBy: 'blogs')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Category $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -62,21 +69,34 @@ class Blog
 
         return $this;
     }
-    // Ajoutez des getters et setters pour le champ "category"
-  #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private ?string $category; // Champ category ajouté ici
 
-    // Les autres méthodes existantes de votre entité Blog
+    public function isOnline(): ?bool
+    {
+        return $this->online;
+    }
 
-    public function getCategory(): ?string
+    public function setOnline(bool $online): static
+    {
+        $this->online = $online;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
     {
         return $this->category;
     }
 
-    public function setCategory(string $category): static
+    public function setCategory(?Category $category): static
     {
         $this->category = $category;
 
         return $this;
+    }
+    public function __construct(
+
+    )
+    {
+        $this ->online= 1;
     }
 }
