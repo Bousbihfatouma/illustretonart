@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminLoginController!{% endblock %}
+
+
+
+{% block body %}
+    <h1>Connexion Administrateur</h1>
+
+    <form method="post">
+        {{ form_start(form) }}
+        {{ form_widget(form.usernom) }}
+        {{ form_widget(form.password) }}
+        <button class="btn">Connexion</button>
+        {{ form_end(form) }}
+    </form>
+
+{% endblock %}

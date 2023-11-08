@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategorypeintregalerieController!{% endblock %}
+
+
+
+
+
+{% block body %}
+
+<h1 class="page-title">Sélectionne la catégorie de peintre </h1>
+
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="{{ asset('images/maestro.jpg') }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+        <a href="{{ path('app_galeriegrandspeintre') }}" >Les peintres qui continuent les mouvements des grands peintres</a>
+      </h5>
+      <p class="card-text">Certaines catégories de peintres perpétuent et continuent les mouvements artistiques initiés par les grands maîtres de la peinture. Ces artistes contemporains s'inspirent des techniques, des styles, et de la vision des célèbres peintres du passé pour créer des œuvres qui perpétuent l'héritage artistique. En explorant de nouvelles interprétations, en mêlant tradition et innovation, ces peintres honorent et élargissent la tradition artistique, tout en apportant leur propre touche unique à l'art, assurant ainsi la pérennité de l'expression artistique à travers les générations. Leur travail représente un pont entre le passé et le présent, offrant une continuité créative qui enrichit notre compréhension de l'art.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="{{ asset('images/classique.jpg') }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+        <a href="#">Peintre art classique</a>
+      </h5>
+      <p class="card-text">Les peintres de la catégorie des peintres classiques incarnent l'héritage intemporel de l'art. Leur travail est imprégné des traditions et des techniques qui ont été raffinées au fil des siècles. Ces artistes maîtrisent les principes classiques de la composition, de la perspective, de la lumière et de la couleur, tout en puisant leur inspiration dans les chefs-d'œuvre des grands maîtres de l'histoire de l'art. Leur travail reflète un profond respect pour la beauté, l'harmonie et la perfection formelle. Les peintres classiques créent des œuvres qui transcendent les époques et qui captivent par leur élégance intemporelle. Leur engagement envers l'excellence artistique perpétue une tradition qui a perduré pendant des siècles et qui continue d'inspirer et d'émerveiller les amateurs d'art du monde entier.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="{{ asset('images/artmoderne.jpg') }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+        <a href="#">Peintre art moderne</a>
+      </h5>
+      <p class="card-text">Les peintres de la catégorie de l'art moderne sont des innovateurs audacieux qui ont repoussé les limites de l'expression artistique au cours du XXe siècle. Ils ont révolutionné l'art en explorant de nouvelles formes d'expression, en remettant en question les conventions traditionnelles et en créant des œuvres qui reflètent les évolutions sociales, culturelles et politiques de leur époque. Ces artistes ont utilisé une variété de styles, de techniques et de médiums pour traduire leurs idées, allant de l'abstraction à la fragmentation de la réalité. L'art moderne est marqué par son caractère expérimental et son engagement envers la liberté créative. Les peintres de cette catégorie ont contribué de manière significative à l'évolution de l'art, laissant derrière eux un héritage d'innovation et de réflexion qui continue d'inspirer les générations futures.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

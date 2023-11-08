@@ -1,0 +1,32 @@
+
+#peintre {
+    height: 100vh; /* Utilisez la hauteur de la fenêtre visible (viewport height) */
+    margin: 0;
+    background-image: url(../images/paint.png);
+    background-size: cover; /* Pour que l'image de fond couvre toute la zone */
+    background-position: center; /* Pour centrer l'image horizontalement et verticalement */
+    position: relative;
+}
+
+#textpeintre-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #05376d;
+    font-size: 24px;
+}
+
+#textpeintre-overlay p {
+    margin: 0;
+}
+.button {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+

@@ -9,4 +9,7 @@
 @import './css/boxicons.css/';
 @import './css/icofont.css/';
 @import './css/style.css/';
+@import './vendor/icofont/icofont.min.css/';
+@import './vendor/boxicons/css/boxicons.min.css/';
+@import './vendor/animate.css/';
 

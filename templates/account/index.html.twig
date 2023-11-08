@@ -1,0 +1,13 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1> Bienvenue {{app.user.nom}} {{app.user.prenom}} dans ton espace perso</h1>
+<h2>{{ app.user.roles | join(', ') }}</h2>
+
+<h4>Modifie tes publications </h4>
+
+{% endblock %}
+
+
+

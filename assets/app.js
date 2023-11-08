@@ -19,16 +19,17 @@ import './js/venobox.js';
 import './js/waypoints.js';
 import './js/counterup.js';
 import './vendor/animate.css';
-import './vendor/aos/aos';
-import './vendor/bootstrap';
+import './vendor/aos/aos.js';
+import './vendor/bootstrap.js';
 import './vendor/boxicons/css/boxicons.min.css';
-import './vendor/counterup/counterup.min';
+import './vendor/counterup/counterup.min.js';
 import './vendor/icofont/icofont.min.css';
-import'./vendor/isotope-layout/isotope.pkgd.min';
-import'./vendor/jquery/jquery.min';
-import'./vendor/jquery-sticky/jquery.sticky';
-import'./vendor/jquery.easing/jquery.easing.min';
-import'./vendor/venobox/venobox.min';
+import'./vendor/isotope-layout/isotope.pkgd.min.js';
+import'./vendor/jquery/jquery.min.js';
+import'./vendor/jquery-sticky/jquery.sticky.js';
+import'./vendor/jquery.easing/jquery.easing.min.js';
+import'./vendor/venobox/venobox.min.js';
+
 
 
 
