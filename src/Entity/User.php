@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -52,6 +54,21 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $created_at = null;
+
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Blog::class)]
+    private Collection $blogs;
+
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Illustration::class)]
+    private Collection $illustrations;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $Texteblog = null;
+
+    public function __construct()
+    {
+        $this->blogs = new ArrayCollection();
+        $this->illustrations = new ArrayCollection();
+    }
 
    
     public function getId(): ?int
@@ -188,6 +205,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     $builder
         ->add('prenom')
+         ->add('nom')
         ->add('password')
         ->add('domaine', ChoiceType::class, [
             'choices' => [
@@ -205,5 +223,77 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             'data_class' => User::class, 
         ]);
     }
+
+  /**
+   * @return Collection<int, Blog>
+   */
+  public function getBlogs(): Collection
+  {
+      return $this->blogs;
+  }
+
+  public function addBlog(Blog $blog): static
+  {
+      if (!$this->blogs->contains($blog)) {
+          $this->blogs->add($blog);
+          $blog->setAuthor($this);
+      }
+
+      return $this;
+  }
+
+  public function removeBlog(Blog $blog): static
+  {
+      if ($this->blogs->removeElement($blog)) {
+          // set the owning side to null (unless already changed)
+          if ($blog->getAuthor() === $this) {
+              $blog->setAuthor(null);
+          }
+      }
+
+      return $this;
+  }
+
+  /**
+   * @return Collection<int, Illustration>
+   */
+  public function getIllustrations(): Collection
+  {
+      return $this->illustrations;
+  }
+
+  public function addIllustration(Illustration $illustration): static
+  {
+      if (!$this->illustrations->contains($illustration)) {
+          $this->illustrations->add($illustration);
+          $illustration->setAuthor($this);
+      }
+
+      return $this;
+  }
+
+  public function removeIllustration(Illustration $illustration): static
+  {
+      if ($this->illustrations->removeElement($illustration)) {
+          // set the owning side to null (unless already changed)
+          if ($illustration->getAuthor() === $this) {
+              $illustration->setAuthor(null);
+          }
+      }
+
+      return $this;
+  }
+
+  public function getTexteblog(): ?string
+  {
+      return $this->Texteblog;
+  }
+
+  public function setTexteblog(?string $Texteblog): static
+  {
+      $this->Texteblog = $Texteblog;
+
+      return $this;
+  }
 
 }
