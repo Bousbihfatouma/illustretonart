@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\BlogRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: BlogRepository::class)]
@@ -32,6 +34,9 @@ class Blog
     #[ORM\ManyToOne(inversedBy: 'blogs')]
     #[ORM\JoinColumn(nullable: false)]
     private ?User $author = null;
+
+    #[ORM\OneToMany(mappedBy: 'blog', targetEntity: Commentaire::class)]
+    private Collection $commentaires;
 
     public function getId(): ?int
     {
@@ -102,6 +107,7 @@ class Blog
     )
     {
         $this ->online= 1;
+        $this->commentaires = new ArrayCollection();
     }
 
     public function getAuthor(): ?User
@@ -114,5 +120,39 @@ class Blog
         $this->author = $author;
 
         return $this;
+    }
+
+    /**
+     * @return Collection<int, Commentaire>
+     */
+    public function getCommentaires(): Collection
+    {
+        return $this->commentaires;
+    }
+
+    public function addCommentaire(Commentaire $commentaire): static
+    {
+        if (!$this->commentaires->contains($commentaire)) {
+            $this->commentaires->add($commentaire);
+            $commentaire->setBlog($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentaire(Commentaire $commentaire): static
+    {
+        if ($this->commentaires->removeElement($commentaire)) {
+            // set the owning side to null (unless already changed)
+            if ($commentaire->getBlog() === $this) {
+                $commentaire->setBlog(null);
+            }
+        }
+
+        return $this;
+    }
+    public function __tostring()
+    {
+        return $this->title;
     }
 }
