@@ -17,6 +17,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 
+
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 
 #[ORM\Table(name: '`user`')]
@@ -295,5 +296,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
       return $this;
   }
+     /**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
+     */
+    private $profileImage;
 
+    // ...
+
+    public function getProfileImage(): ?string
+    {
+        return $this->profileImage;
+    }
+
+    public function setProfileImage(?string $profileImage): self
+    {
+        $this->profileImage = $profileImage;
+
+        return $this;
+    }
+    
 }

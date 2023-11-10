@@ -30,4 +30,12 @@ easy_admin:
             class: App\Entity\Galerie
             list:
                 actions:
-                    - { name: 'listeNomsPrenoms', label: 'Liste Noms et Prénoms' }        
+                    - { name: 'listeNomsPrenoms', label: 'Liste Noms et Prénoms' }  
+        User:
+            class: App\Entity\User
+            list:
+                fields:
+                    - email
+                    - Texteblog
+                    - { property: 'profileImage', label: 'Image de profil' }
+              

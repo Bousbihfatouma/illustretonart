@@ -6,6 +6,8 @@ use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class TexteblogType extends AbstractType
 {
@@ -13,11 +15,19 @@ class TexteblogType extends AbstractType
     {
         $builder
             ->add('email')
-           
             ->add('password')
-           
-            ->add('Texteblog')
-            
+            ->add('Texteblog', TextareaType::class, [
+                'label' => 'Texteblog',
+                'required' => true,
+                'attr' => [
+                    'rows' => 10,
+                ],
+            ])
+            ->add('profileImage', FileType::class, [
+                'label' => 'Image',
+                'required' => false,
+                'mapped' => false,
+            ])
         ;
     }
 

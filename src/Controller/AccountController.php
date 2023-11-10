@@ -7,37 +7,49 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\User;
-
-
 
 class AccountController extends AbstractController
 {
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+
     #[Route('/account', name: 'account_index')]
     public function index(Request $request): Response
     {
         $user = $this->getUser();
 
-        // Vérifier si l'utilisateur est connecté
         if (!$user) {
             return $this->redirectToRoute('app_login');
         }
 
-        // Créer le formulaire
         $form = $this->createForm(TexteblogType::class, $user);
         $form->handleRequest($request);
 
-        // Vérifier si le formulaire est soumis et valide
         if ($form->isSubmitted() && $form->isValid()) {
-            // Enregistrez les modifications dans la base de données si nécessaire
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->flush();
+            // Handle file upload
+            $file = $form['profileImage']->getData();
+            if ($file) {
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
+                $file->move(
+                    $this->getParameter('image_directory'), // Define this parameter in services.yaml or config/services.yaml
+                    $fileName
+                );
 
-            // Rediriger ou effectuer d'autres actions après l'enregistrement
+                $user->setProfileImage($fileName);
+            }
+
+            $this->entityManager->persist($user);
+            $this->entityManager->flush();
+
             return $this->redirectToRoute('account_index');
         }
 
-        // Rendre le template avec le formulaire
         return $this->render('account/index.html.twig', [
             'controller_name' => 'AccountController',
             'form' => $form->createView(),

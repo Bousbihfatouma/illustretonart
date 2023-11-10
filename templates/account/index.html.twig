@@ -2,18 +2,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1> Bienvenue {{app.user.nom}} {{app.user.prenom}} dans ton espace perso</h1>
-<h2>{{ app.user.roles | join(', ') }}</h2>
+    <h1> Bienvenue {{ app.user.nom }} {{ app.user.prenom }} dans ton espace perso</h1>
+    <h2>{{ app.user.roles | join(', ') }}</h2>
 
+    <h4>Modifie tes publications </h4>
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
 
+        {% if app.user.profileImage %}
+           <img src="{{ asset('uploads/images/' ~ app.user.profileImage) }}" alt=" Image">
+        {% endif %}
 
-<h4>Modifie tes publications </h4>
- {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button type="submit">Enregistrer</button>
+        <button type="submit">Enregistrer</button>
     {{ form_end(form) }}
-
 {% endblock %}
-
-
-
