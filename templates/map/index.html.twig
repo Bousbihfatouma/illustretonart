@@ -1,0 +1,263 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div id="map" class="mt-5 mb-5"></div>
+
+{# {% for filter in filters  %} #}
+   <div class="container-map-buttons text-center">
+        <div class="btns-container">
+        <input class="btn btn-primary btn-custom mr-2" id="musee" value="MUSEE">
+        <input class="btn btn-secondary btn-color-custom mr-2" id="ecoleart" value="ECOLEART">
+        <input class="btn btn-info beige-background" id="tous" value="Tous">
+
+
+    </div>
+
+
+{# {% endfor %} #}
+{# 
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    let markersJS = [];
+
+    const map = L.map('map').setView([48.833, 2.333], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    let input1 = document.getElementById('association');
+    console.log(input1);
+
+    {% for marker in markers %}
+        console.log({{ marker.id }});
+        markersJS.push({
+            "id": "{{ marker.id }}",
+            "title": "{{ marker.markerTitle }}",
+            "image": "{{ marker.markerImage }}",
+            "email": "{{ marker.markerEmail }}",
+            "title": "{{ marker.markerTitle }}",
+            "tel": "{{ marker.tel }}",
+            "longitude": "{{ marker.longitude }}",
+            "latitude": "{{ marker.latitude }}",
+            "slug": "{{ marker.markerSlug }}",
+            "description": "{{ marker.markerDescription }}",
+            "street": "{{ marker.street }}",
+            "zip": "{{ marker.zipCode }}",
+            "icon": "{{ marker.icon }}",
+        });
+    {% endfor %}
+
+    console.log(markersJS);
+
+    var myIcon = L.icon({
+        iconUrl: "../../public/images/marker-icon.png",
+        iconSize: [30, 30], // taille de l'icône
+        iconAnchor: [15, 30], // position de l'ancre de l'icône
+        popupAnchor: [0, -30] // position de l'ancre de la popup
+    });
+
+    for (var i = 0; i <div markersJS.length; i++) {
+        L.marker([markersJS[i].latitude, markersJS[i].longitude], { icon: myIcon }).addTo(map)
+            .bindPopup(markersJS[i].title);
+    }
+}); #}
+
+
+{# code au dessus fonctionnel mais pas d'images de marker #}
+
+</div>
+{% endblock %}
+{% block javascripts %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+     var map = L.map('map').setView([48.86666667, 2.3333333], 11.5);
+    let markersJS = []; // Variable pour stocker tous les marqueurs
+    let activeMarkers = []; // Variable pour stocker les marqueurs actifs
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+
+    {% for marker in markers %}
+        markersJS.push({
+            "id": "{{ marker.id }}",
+            "title": "{{ marker.markerTitle }}",
+            "image": "{{ asset('images/marker/' ~ marker.icon) }}",
+            "markerImage": "{{ asset('images/marker/' ~ marker.markerImage) }}",
+
+            "tel": "{{ marker.tel }}",
+            "longitude": "{{ marker.longitude }}",
+            "latitude": "{{ marker.latitude }}",
+            "slug": "{{ marker.markerSlug }}",
+            "description": "{{ marker.markerDescription }}",
+            "street": "{{ marker.street }}",
+            "zip": "{{ marker.zipCode }}"
+        });
+    {% endfor %}
+    function afficheMarkers() {
+        for (var i = 0; i < markersJS.length; i++) {
+            var marker = markersJS[i];
+            var myIcon = L.icon({
+                iconUrl: marker.image,
+                iconSize: [30, 30],
+                iconAnchor: [15, 30],
+                popupAnchor: [0, -30]
+            });
+
+            var markerLayer = L.marker([marker.latitude, marker.longitude], { icon: myIcon }).addTo(map);
+            markerLayer.bindPopup('<h2>' + marker.title + '</h2>'
+                 + '<img src="'+ marker.markerImage +'" id="pop-image">'
+                + '<p id="pop-description">' + marker.description + '</p>'
+                + '<p id="pop-email">' + marker.email + '</p>'
+                + '<p id="pop-marker">' + marker.tel + '</p>'
+                + '<p id="pop-street">' + marker.street + ' ' + marker.zip + '</p>');
+
+            activeMarkers.push(markerLayer); // Ajoute le marqueur à la liste des marqueurs actifs
+        }
+    }
+
+    function supprimeMarkers() {
+        for (var i = 0; i < activeMarkers.length; i++) {
+            map.removeLayer(activeMarkers[i]); // Supprime chaque marqueur de la carte
+        }
+        activeMarkers = []; // Réinitialise la liste des marqueurs actifs
+    }
+
+    function ajoutMarker1() {
+        supprimeMarkers(); // Supprime tous les marqueurs
+        var image = "{{ asset('images/marker/association-marker.png') }}";
+        for (var i = 0; i < markersJS.length; i++) {
+            var marker = markersJS[i];
+            if (marker.image === image) {
+                var myIcon = L.icon({
+                    iconUrl: marker.image,
+                    iconSize: [30, 30],
+                    iconAnchor: [15, 30],
+                    popupAnchor: [0, -30]
+                });
+
+                var markerLayer = L.marker([marker.latitude, marker.longitude], { icon: myIcon }).addTo(map);
+                markerLayer.bindPopup('<h2>' + marker.title + '</h2>'
+                    + '<p>' + marker.image + '</p>'
+                    + '<p>' + marker.description + '</p>'
+                    + '<p>' + marker.email + '</p>'
+                    + '<p>' + marker.tel + '</p>'
+                    + '<p>' + marker.street + ' ' + marker.zip + '</p>');
+
+                activeMarkers.push(markerLayer); // Ajoute le marqueur à la liste des marqueurs actifs
+            }
+        }
+    }
+
+    function ajoutMarker2() {
+        supprimeMarkers(); // Supprime tous les marqueurs
+        var image = "{{ asset('images/marker/accompagnement-marker.png') }}";
+        for (var i = 0; i < markersJS.length; i++) {
+            var marker = markersJS[i];
+            if (marker.image === image) {
+                var myIcon = L.icon({
+                    iconUrl: marker.image,
+                    iconSize: [30, 30],
+                    iconAnchor: [15, 30],
+                    popupAnchor: [0, -30]
+                });
+
+                var markerLayer = L.marker([marker.latitude, marker.longitude], { icon: myIcon }).addTo(map);
+                markerLayer.bindPopup('<h2>' + marker.title + '</h2>'
+                    + '<p>' + marker.image + '</p>'
+                    + '<p>' + marker.description + '</p>'
+                    + '<p>' + marker.email + '</p>'
+                    + '<p>' + marker.tel + '</p>'
+                    + '<p>' + marker.street + ' ' + marker.zip + '</p>');
+
+                activeMarkers.push(markerLayer); // Ajoute le marqueur à la liste des marqueurs actifs
+            }
+        }
+    }
+
+        function ajoutMarker3() {
+        afficheMarkers(); // Supprime tous les marqueurs
+
+
+                var markerLayer = L.marker([marker.latitude, marker.longitude], { icon: myIcon }).addTo(map);
+                markerLayer.bindPopup('<h2>' + marker.title + '</h2>'
+                    + '<p>' + marker.image + '</p>'
+                    + '<p>' + marker.description + '</p>'
+                    + '<p>' + marker.email + '</p>'
+                    + '<p>' + marker.tel + '</p>'
+                    + '<p>' + marker.street + ' ' + marker.zip + '</p>');
+
+                activeMarkers.push(markerLayer); // Ajoute le marqueur à la liste des marqueurs actifs
+            
+        } 
+
+    afficheMarkers(); // Affiche tous les marqueurs au chargement de la page
+
+    document.getElementById('musee').addEventListener('click', ajoutMarker1);
+    document.getElementById('ecoleart').addEventListener('click', ajoutMarker2);
+    document.getElementById('tous').addEventListener('click', ajoutMarker3);
+});
+
+
+
+
+//création des élements selectionnant les boutons
+{# var input1 =  document.getElementById('association');
+var input1 =  document.getElementById('accompagnement');
+
+input1.addEventListener ('click', ajoutmarker1);
+input2.addEventListener ('click', ajoutmarker2);
+function ajoutmarker1 (){
+    if (marker.filters === 'association') {
+            map.eachLayer(function (layer) {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
+        console.log(input1.value);
+            var myIcon = L.icon({
+        iconUrl: "{{ asset('images/marker/sans-gluten-marker.png')}}",
+ // position de l'ancre de la popup
+    });
+
+       L.marker([{{ marker.latitude }}, {{ marker.longitude }}], {icon: myIcon}).addTo(map)
+        .bindPopup('{{ marker.markerTitle }}');
+        ;
+    }  }
+
+function ajoutmarker2 (){
+    if (input2.value === 'accompagnement') {
+            map.eachLayer(function (layer) {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
+        console.log(input2.value);
+            var myIcon = L.icon({
+        iconUrl: "{{ asset('images/marker/sans-gluten-marker.png')}}",
+ // position de l'ancre de la popup
+    });
+
+       L.marker([{{ marker.latitude }}, {{ marker.longitude }}], {icon: myIcon}).addTo(map)
+        .bindPopup('{{ marker.markerTitle }}');
+        ;
+    }  } #}
+
+
+
+
+
+
+</script>
+
+{% endblock %}
+
+
+

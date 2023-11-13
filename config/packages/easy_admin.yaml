@@ -28,6 +28,7 @@ easy_admin:
                     - category
         Galerie:
             class: App\Entity\Galerie
+             
             list:
                 actions:
                     - { name: 'listeNomsPrenoms', label: 'Liste Noms et Prénoms' }  
