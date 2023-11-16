@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popupAnchor: [0, -30] // position de l'ancre de la popup
     });
 
-    for (var i = 0; i <div markersJS.length; i++) {
+    for (var i = 0; i < markersJS.length; i++) {
         L.marker([markersJS[i].latitude, markersJS[i].longitude], { icon: myIcon }).addTo(map)
             .bindPopup(markersJS[i].title);
     }
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 {# code au dessus fonctionnel mais pas d'images de marker #}
 
-</div>
+
 {% endblock %}
 {% block javascripts %}
 <script>
@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
             var marker = markersJS[i];
             var myIcon = L.icon({
                 iconUrl: marker.image,
-                iconSize: [30, 30],
-                iconAnchor: [15, 30],
+                iconSize: [50, 50],
+                iconAnchor: [50, 50],
                 popupAnchor: [0, -30]
             });
 
@@ -132,14 +132,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function ajoutMarker1() {
         supprimeMarkers(); // Supprime tous les marqueurs
-        var image = "{{ asset('images/marker/association-marker.png') }}";
+        var image = "{{ asset('images/marker/marker-musee.png') }}";
         for (var i = 0; i < markersJS.length; i++) {
             var marker = markersJS[i];
             if (marker.image === image) {
                 var myIcon = L.icon({
                     iconUrl: marker.image,
-                    iconSize: [30, 30],
-                    iconAnchor: [15, 30],
+                    iconSize: [100, 100],
+                    iconAnchor: [50, 50],
                     popupAnchor: [0, -30]
                 });
 
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function ajoutMarker2() {
         supprimeMarkers(); // Supprime tous les marqueurs
-        var image = "{{ asset('images/marker/accompagnement-marker.png') }}";
+        var image = "{{ asset('images/marker/marker-ecoleart.png') }}";
         for (var i = 0; i < markersJS.length; i++) {
             var marker = markersJS[i];
             if (marker.image === image) {

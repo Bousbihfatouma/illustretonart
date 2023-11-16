@@ -42,11 +42,14 @@ class Galerie
     #[ORM\Column(length: 255)]
     private ?string $titreimage = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $user = null;
+  
 
     #[ORM\OneToMany(mappedBy: 'parent', targetEntity: Illustration::class)]
     private Collection $illustrations;
+
+    #[ORM\ManyToOne(inversedBy: 'galeries')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?user $user = null;
 
     public function __construct()
     {
@@ -158,25 +161,13 @@ class Galerie
 
     
 
-    /**
-     * @ORM\OneToOne(targetEntity=User::class, inversedBy="galerie")
-     * @ORM\JoinColumn(nullable=false)
-     */
+    
+     
  
 
     
 
-    public function getUser(): ?User
-    {
-        return $this->user;
-    }
-
-    public function setUser(?User $user): self
-    {
-        $this->user = $user;
-        return $this;
-    }
-
+    
     /**
      * @return Collection<int, Illustration>
      */
@@ -203,6 +194,18 @@ class Galerie
                 $illustration->setParent(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUser(): ?user
+    {
+        return $this->user;
+    }
+
+    public function setUser(?user $user): static
+    {
+        $this->user = $user;
 
         return $this;
     }

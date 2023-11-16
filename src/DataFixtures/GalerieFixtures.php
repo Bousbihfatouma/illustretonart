@@ -20,18 +20,21 @@ class GalerieFixtures extends Fixture implements DependentFixtureInterface
 public function load(ObjectManager $manager)
 { 
     $faker = Faker\Factory::create("fr_FR");
-    $user = $this->getReference("user-" . rand(1, 8));
+   
+  $userId = $this->getReference("user-" . rand(1, 8));
+   $user = new User($userId);
+
     $category = $this->getReference("category-" . rand(1, 3));
 
     //
     $galerie = new Galerie();
-    $galerie->setImage('');
+    $galerie->setImage('bambou.jpg');
     $galerie->setTitre("");
     $galerie->setDescriptionimage("");
 
     
     // Utilisez l'objet User récupéré plutôt que son ID
-    $galerie->setUser($user);
+    $galerie->setUser($userId);
 
     $manager->persist($galerie);
     $manager->flush(); // Enregistrez les données dans la base de données

@@ -11,14 +11,8 @@ use App\Form\AdminLoginType;
 
 class AdminLoginController extends AbstractController
 {
-    #[Route('/admin/login', name: 'app_admin_login')]
-    public function index(): Response
-    {
-        return $this->render('admin_login/index.html.twig', [
-            'controller_name' => 'AdminLoginController',
-        ]);
-    }
-    
+   
+      #[Route('/admin/login', name: 'app_admin_login')]
     public function login(Request $request, AuthenticationUtils $authenticationUtils)
     {
         // Gérez l'affichage du formulaire de connexion et la soumission ici

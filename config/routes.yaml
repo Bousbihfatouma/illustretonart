@@ -4,3 +4,11 @@ controllers:
  
 app_logout:
     path: '/logout'
+
+api_controllers:
+  name_prefix: api_
+  prefix: /api
+  resource: ../src/Api/Controller/
+  type: attribute 
+
+

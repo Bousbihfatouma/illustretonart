@@ -56,10 +56,7 @@ class Marker
     #[ORM\JoinColumn(nullable: false)]
     private ?Filter $filters = null;
 
-    #[ORM\ManyToOne(inversedBy: 'markers')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?User $userAdmin = null;
-
+  
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $icon = null;
 
@@ -231,17 +228,6 @@ class Marker
         return $this;
     }
 
-    public function getUserAdmin(): ?User
-    {
-        return $this->userAdmin;
-    }
-
-    public function setUserAdmin(?User $userAdmin): static
-    {
-        $this->userAdmin = $userAdmin;
-
-        return $this;
-    }
 
     public function getIcon(): ?string
     {

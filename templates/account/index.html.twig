@@ -15,4 +15,19 @@
 
         <button type="submit">Enregistrer</button>
     {{ form_end(form) }}
+
+    <hr />
+
+    <h2 style="text-decoration:underline;">Commencer à discuter avec des artistes</h4>
+
+    {% for user in users %}
+        <ul>
+            <li>
+                <a href="{{ path('conversation_add', {id: user.id}) }}">
+                    Discuter avec {{ user.prenom }}
+                </a>
+            </li>
+        </ul>
+    {% endfor %}
+
 {% endblock %}

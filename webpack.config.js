@@ -15,12 +15,11 @@ Encore
     //.setManifestKeyPrefix('build/')
 
     /*
-     * ENTRY CONFIG
-     *
-     * Each entry will result in one JavaScript file (e.g. app.js)
-     * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
-     */
-    .addEntry('app', './assets/app.js')
+     
+ENTRY CONFIG*
+Each entry will result in one JavaScript file (e.g. app.js)
+and one CSS file (e.g. app.css) if your JavaScript imports CSS.*/
+.addEntry('app', './assets/app.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
@@ -33,31 +32,28 @@ Encore
     .enableSingleRuntimeChunk()
 
     /*
-     * FEATURE CONFIG
-     *
-     * Enable & configure other features below. For a full
-     * list of features, see:
-     * https://symfony.com/doc/current/frontend.html#adding-more-features
-     */
-    .cleanupOutputBeforeBuild()
-    .enableBuildNotifications()
-    .enableSourceMaps(!Encore.isProduction())
-    // enables hashed filenames (e.g. app.abc123.css)
-    .enableVersioning(Encore.isProduction())
+     
+FEATURE CONFIG*
+Enable & configure other features below. For a full
+list of features, see:
+https://symfony.com/doc/current/frontend.html#adding-more-features
+*/
+.cleanupOutputBeforeBuild().enableBuildNotifications().enableSourceMaps(!Encore.isProduction())// enables hashed filenames (e.g. app.abc123.css).enableVersioning(Encore.isProduction())
 
     // configure Babel
-    // .configureBabel((config) => {
-    //     config.plugins.push('@babel/a-babel-plugin');
-    // })
-
+  /*    .configureBabel((config) => {
+        config.plugins.push('@babel/a-babel-plugin');
+    })
+ /
     // enables and configure @babel/preset-env polyfills
-    .configureBabelPresetEnv((config) => {
+/     .configureBabelPresetEnv((config) => {
         config.useBuiltIns = 'usage';
         config.corejs = '3.23';
     })
-
+ */
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
+    .enablePreactPreset()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

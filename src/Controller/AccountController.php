@@ -2,21 +2,29 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Form\TexteblogType;
+use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\ConversationRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Doctrine\ORM\EntityManagerInterface;
-use App\Entity\User;
 
 class AccountController extends AbstractController
 {
     private $entityManager;
 
-    public function __construct(EntityManagerInterface $entityManager)
+    private UserRepository $userRepository;
+
+    private ConversationRepository $conversationRepository;
+
+    public function __construct(EntityManagerInterface $entityManager, UserRepository $userRepository, ConversationRepository $conversationRepository)
     {
         $this->entityManager = $entityManager;
+        $this->userRepository = $userRepository;
+        $this->conversationRepository = $conversationRepository;
     }
 
     #[Route('/account', name: 'account_index')]
@@ -27,6 +35,8 @@ class AccountController extends AbstractController
         if (!$user) {
             return $this->redirectToRoute('app_login');
         }
+
+        $conversations = $this->conversationRepository->findByCreator($user);
 
         $form = $this->createForm(TexteblogType::class, $user);
         $form->handleRequest($request);
@@ -53,6 +63,8 @@ class AccountController extends AbstractController
         return $this->render('account/index.html.twig', [
             'controller_name' => 'AccountController',
             'form' => $form->createView(),
+            'users' => $this->userRepository->findAllExceptUser($this->getUser()),
+            'conversations' => $conversations,
         ]);
     }
 }
