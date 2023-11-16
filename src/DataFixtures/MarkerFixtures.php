@@ -15,8 +15,8 @@ class MarkerFixtures extends Fixture
         $marker->setMarkerImage('louvredehors.jpg');
         $marker->setMarkerEmail('https://louvre.fr');
         $marker->setTel('140205177');
-        $marker->setLongitude('48.86123220406439');
-        $marker->setLatitude('2.337257777255276');
+        $marker->setLongitude('2.337257777255276');
+        $marker->setLatitude('48.86123220406439');
         $marker->setMarkerSlug('marker-1');
         $marker->setMarkerDescription('Le musée du Louvre est un musée situé dans le 1ᵉʳ arrondissement de Paris');
         $marker->setStreet('8 rue Sainte-Anne ');
@@ -102,7 +102,7 @@ class MarkerFixtures extends Fixture
         $manager->flush();
     }
 
-    public function getDependencies(): array
+      public function getDependencies(): array
 {
     return [
         FilterFixtures::class,

@@ -7,6 +7,8 @@ use App\Entity\Contact;
 use App\Entity\Blog;
 use App\Entity\Galerie;
 use App\Entity\Commentaire;
+use App\Entity\Marker;
+use App\Entity\Map;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -102,6 +104,17 @@ class DashboardController extends AbstractDashboardController
              MenuItem::linkToCrud('Create Commentaire', 'fas fa-plus', Commentaire::class)->setAction(Crud::PAGE_NEW),
              MenuItem::linkToCrud('Show Commentaire', 'fas fa-eye', Commentaire::class),
              MenuItem::linkToCrud('Edit Commentaire', 'fas fa-edit', Commentaire::class)->setAction(Crud::PAGE_EDIT)
+
+        ]);
+
+        
+        yield MenuItem::section('Marker','fas fa-icone');
+
+
+        yield MenuItem::subMenu('MarkerActions', 'fas fa-bars')->setSubItems([
+            MenuItem::linkToCrud('Create Marker', 'fas fa-plus', Marker::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Show Marker', 'fas fa-eye', Marker::class),
+            MenuItem::linkToCrud('Edit Marker', 'fas fa-edit', Marker::class)->setAction(Crud::PAGE_EDIT)
 
         ]);
 

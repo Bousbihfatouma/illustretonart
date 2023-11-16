@@ -7,6 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Repository\MarkerRepository;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation\UploadableField;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 #[ORM\Entity(repositoryClass: MarkerRepository::class)]
 class Marker
