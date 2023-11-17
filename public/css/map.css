@@ -7,3 +7,62 @@
     z-index: 0;  
    
 }
+
+
+.btn-custom {
+    background-color:#FF69B4;
+    
+  }
+
+  .btn-color-custom {
+    background-color:#87CEFA;
+    /* Autres styles de bouton personnalisés */
+  }
+
+  .beige-background {
+     background-color:#cd8527c9;
+     }
+  
+  
+
+  .leaflet-popup {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+    padding: 20px;
+   background-image:url("../../images/fond.png");
+    max-width: 600px;
+    margin: 100px auto;
+    font-family: "Fredoka One", cursive;
+    position:fixed;
+    z-index: 1;
+   
+}
+
+#pop-image{
+    width:70%;
+}
+
+#pop-description{
+ color:#f7a5dc;
+}
+
+h2{
+    color:#9d4a75
+
+}
+
+#pop-email{
+    color:#de557f
+}
+
+#pop-street{
+    color:#cd8527c9
+}
+
+
+
+
+
+
+
+  

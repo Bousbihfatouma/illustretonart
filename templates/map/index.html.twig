@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (marker.image === image) {
                 var myIcon = L.icon({
                     iconUrl: marker.image,
-                    iconSize: [100, 100],
+                    iconSize: [50, 50],
                     iconAnchor: [50, 50],
                     popupAnchor: [0, -30]
                 });
@@ -158,14 +158,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function ajoutMarker2() {
         supprimeMarkers(); // Supprime tous les marqueurs
-        var image = "{{ asset('images/marker/marker-ecoleart.png') }}";
+        var image = "{{ asset('images/marker/markerecoleart.png') }}";
         for (var i = 0; i < markersJS.length; i++) {
             var marker = markersJS[i];
             if (marker.image === image) {
                 var myIcon = L.icon({
                     iconUrl: marker.image,
-                    iconSize: [30, 30],
-                    iconAnchor: [15, 30],
+                    iconSize: [50, 50],
+                    iconAnchor: [50, 50],
                     popupAnchor: [0, -30]
                 });
 

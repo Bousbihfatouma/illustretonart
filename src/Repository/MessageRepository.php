@@ -3,8 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\Message;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use App\Entity\Conversation;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @extends ServiceEntityRepository<Message>
@@ -45,4 +46,24 @@ class MessageRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+public function findByConversation(Conversation $conversation)
+{
+    return $this->createQueryBuilder('m')
+        ->where('m.conversation = :conversation')
+        ->setParameter('conversation', $conversation)
+        ->orderBy('m.createdAt', 'DESC') // Tri par ordre décroissant
+        ->getQuery()
+        ->getResult();
+}
+public function findMessagesByConversationOrderedByLatest(Conversation $conversation)
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.conversation = :conversation')
+            ->setParameter('conversation', $conversation)
+            ->orderBy('m.sentAt', 'DESC') // Tri par ordre décroissant selon 'createdAt'
+            ->getQuery()
+            ->getResult();
+    }
+
+
 }

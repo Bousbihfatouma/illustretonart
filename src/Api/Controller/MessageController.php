@@ -7,6 +7,7 @@ use App\Entity\Message;
 use App\Event\MessageEvent;
 use App\Entity\Conversation;
 use App\Repository\UserRepository;
+use App\Repository\MessageRepository;
 use Symfony\Component\Mercure\Update;
 use App\Repository\FriendshipRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -29,14 +30,17 @@ class MessageController extends AbstractController
 
     public function __construct(
         private readonly SerializerInterface $serializer,
-        private readonly EntityManagerInterface $em
+        private readonly EntityManagerInterface $em,
+        private readonly MessageRepository $messageRepository,
     ) {
     }
 
-    #[Route(path: '/conversation/{id<\d+>}/all', name: 'api_message_list', methods: ['GET'])]
+  #[Route(path: '/conversation/{id<\d+>}/all', name: 'api_message_list', methods: ['GET'])]
     public function list(Conversation $conversation): JsonResponse
     {
-        $messages = $conversation->getMessages();
+        // Utilisez la méthode modifiée du repository pour obtenir les messages triés
+        $messages = $this->messageRepository->findMessagesByConversationOrderedByLatest($conversation);
+
         $data = [];
         foreach ($messages as $message) {
             $author = $message->getSentBy();
@@ -44,11 +48,13 @@ class MessageController extends AbstractController
                 'author' => $message->getSentBy()->getId(),
                 'username' => $message->getSentBy()->getPrenom() . ' ' . $message->getSentBy()->getNom(),
                 'content' => $message->getContent(),
+
             ];
         }
+
         $json = $this->serializer->serialize($data, 'json');
         return new JsonResponse($json, Response::HTTP_OK, [], true);
-    }
+}
 
     #[Route(path: '/conversation/{id<\d+>}/messages', name: 'api_message', methods: ['POST'])]
     public function create(
