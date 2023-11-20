@@ -6,6 +6,9 @@ use App\Entity\User;
 use App\Entity\Contact;
 use App\Entity\Blog;
 use App\Entity\Galerie;
+use App\Entity\Commentaire;
+use App\Entity\Marker;
+use App\Entity\Map;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -55,8 +58,8 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-
-        yield MenuItem::section('User','fa fa-person');
+      
+          yield MenuItem::section('User','fa fa-person');
 
         yield MenuItem::subMenu('UserActions', 'fas fa-bars')->setSubItems([
             MenuItem::linkToCrud('Create User', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW),
@@ -84,7 +87,7 @@ class DashboardController extends AbstractDashboardController
              MenuItem::linkToCrud('Edit Blog', 'fas fa-edit', Blog::class)->setAction(Crud::PAGE_EDIT)
 
         ]);
-
+       
         yield MenuItem::section('Galerie','fa fa-images');
 
 
@@ -94,5 +97,26 @@ class DashboardController extends AbstractDashboardController
              MenuItem::linkToCrud('Edit Galerie', 'fas fa-edit', Galerie::class)->setAction(Crud::PAGE_EDIT)
 
         ]);
+
+         yield MenuItem::section('Commentaire','fa fa-comment');
+      
+        yield MenuItem::subMenu('Commentaire', 'fas fa-comment')->setSubItems([
+             MenuItem::linkToCrud('Create Commentaire', 'fas fa-plus', Commentaire::class)->setAction(Crud::PAGE_NEW),
+             MenuItem::linkToCrud('Show Commentaire', 'fas fa-eye', Commentaire::class),
+             MenuItem::linkToCrud('Edit Commentaire', 'fas fa-edit', Commentaire::class)->setAction(Crud::PAGE_EDIT)
+
+        ]);
+
+        
+        yield MenuItem::section('Marker','fas fa-icone');
+
+
+        yield MenuItem::subMenu('MarkerActions', 'fas fa-bars')->setSubItems([
+            MenuItem::linkToCrud('Create Marker', 'fas fa-plus', Marker::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Show Marker', 'fas fa-eye', Marker::class),
+            MenuItem::linkToCrud('Edit Marker', 'fas fa-edit', Marker::class)->setAction(Crud::PAGE_EDIT)
+
+        ]);
+
     }
 }

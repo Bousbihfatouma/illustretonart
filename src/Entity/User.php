@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -12,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints as Assert;
+
 
 
 
@@ -38,24 +41,50 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255 ,nullable: true)]
     private ?string $prenom = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255,nullable: true)]
     private ?string $nom = null;
 
-    #[ORM\Column(type: Types::TEXT)]
+    #[ORM\Column(type: Types::TEXT,nullable: true)]
     private ?string $aPropos = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255,nullable: true)]
     private ?string $instagram = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $created_at = null;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
-    private ?galerie $galerie = null;
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Blog::class)]
+    private Collection $blogs;
 
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Illustration::class)]
+    private Collection $illustrations;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $Texteblog = null;
+
+    #[ORM\OneToMany(mappedBy: 'createdBy', targetEntity: Conversation::class)]
+    private Collection $conversations;
+
+    #[ORM\ManyToMany(targetEntity: Conversation::class, mappedBy: 'participants')]
+    private Collection $conversationsParticipants;
+
+    #[ORM\OneToMany(mappedBy: 'sentBy', targetEntity: Message::class)]
+    private Collection $messages;
+
+    public function __construct()
+    {
+        $this->blogs = new ArrayCollection();
+        $this->illustrations = new ArrayCollection();
+        $this->conversations = new ArrayCollection();
+        $this->conversationsParticipants = new ArrayCollection();
+        $this->messages = new ArrayCollection();
+        $this->galeries = new ArrayCollection();
+    }
+
+   
     public function getId(): ?int
     {
         return $this->id;
@@ -190,6 +219,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     $builder
         ->add('prenom')
+         ->add('nom')
         ->add('password')
         ->add('domaine', ChoiceType::class, [
             'choices' => [
@@ -208,17 +238,215 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         ]);
     }
 
-  public function getGalerie(): ?galerie
+  /**
+   * @return Collection<int, Blog>
+   */
+  public function getBlogs(): Collection
   {
-      return $this->galerie;
+      return $this->blogs;
   }
 
-  public function setGalerie(?galerie $galerie): static
+  public function addBlog(Blog $blog): static
   {
-      $this->galerie = $galerie;
+      if (!$this->blogs->contains($blog)) {
+          $this->blogs->add($blog);
+          $blog->setAuthor($this);
+      }
 
       return $this;
   }
+
+  public function removeBlog(Blog $blog): static
+  {
+      if ($this->blogs->removeElement($blog)) {
+          // set the owning side to null (unless already changed)
+          if ($blog->getAuthor() === $this) {
+              $blog->setAuthor(null);
+          }
+      }
+
+      return $this;
+  }
+
+  /**
+   * @return Collection<int, Illustration>
+   */
+  public function getIllustrations(): Collection
+  {
+      return $this->illustrations;
+  }
+
+  public function addIllustration(Illustration $illustration): static
+  {
+      if (!$this->illustrations->contains($illustration)) {
+          $this->illustrations->add($illustration);
+          $illustration->setAuthor($this);
+      }
+
+      return $this;
+  }
+
+  public function removeIllustration(Illustration $illustration): static
+  {
+      if ($this->illustrations->removeElement($illustration)) {
+          // set the owning side to null (unless already changed)
+          if ($illustration->getAuthor() === $this) {
+              $illustration->setAuthor(null);
+          }
+      }
+
+      return $this;
+  }
+
+  public function getTexteblog(): ?string
+  {
+      return $this->Texteblog;
+  }
+
+  public function setTexteblog(?string $Texteblog): static
+  {
+      $this->Texteblog = $Texteblog;
+
+      return $this;
+  }
+     /**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
+     */
+    private $profileImage;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Galerie::class)]
+    private Collection $galeries;
+
+    // ...
+
+    public function getProfileImage(): ?string
+    {
+        return $this->profileImage;
+    }
+
+    public function setProfileImage(?string $profileImage): self
+    {
+        $this->profileImage = $profileImage;
+
+        return $this;
+    }
+
+      /**
+     * @return Collection<int, Conversation>
+     */
+    public function getConversations(): Collection
+    {
+        return $this->conversations;
+    }
+
+    public function addConversation(Conversation $conversation): static
+    {
+        if (!$this->conversations->contains($conversation)) {
+            $this->conversations->add($conversation);
+            $conversation->setCreatedBy($this);
+        }
+
+        return $this;
+    }
+
+    public function removeConversation(Conversation $conversation): static
+    {
+        if ($this->conversations->removeElement($conversation)) {
+            // set the owning side to null (unless already changed)
+            if ($conversation->getCreatedBy() === $this) {
+                $conversation->setCreatedBy(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Conversation>
+     */
+    public function getConversationsParticipants(): Collection
+    {
+        return $this->conversationsParticipants;
+    }
+
+    public function addConversationsParticipant(Conversation $conversationsParticipant): static
+    {
+        if (!$this->conversationsParticipants->contains($conversationsParticipant)) {
+            $this->conversationsParticipants->add($conversationsParticipant);
+            $conversationsParticipant->addParticipant($this);
+        }
+
+        return $this;
+    }
+
+    public function removeConversationsParticipant(Conversation $conversationsParticipant): static
+    {
+        if ($this->conversationsParticipants->removeElement($conversationsParticipant)) {
+            $conversationsParticipant->removeParticipant($this);
+        }
+
+        return $this;
+    }
+    
+    /**
+     * @return Collection<int, Message>
+     */
+    public function getMessages(): Collection
+    {
+        return $this->messages;
+    }
+
+    public function addMessage(Message $message): static
+    {
+        if (!$this->messages->contains($message)) {
+            $this->messages->add($message);
+            $message->setSentBy($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMessage(Message $message): static
+    {
+        if ($this->messages->removeElement($message)) {
+            // set the owning side to null (unless already changed)
+            if ($message->getSentBy() === $this) {
+                $message->setSentBy(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Galerie>
+     */
+    public function getGaleries(): Collection
+    {
+        return $this->galeries;
+    }
+
+    public function addGalery(Galerie $galery): static
+    {
+        if (!$this->galeries->contains($galery)) {
+            $this->galeries->add($galery);
+            $galery->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGalery(Galerie $galery): static
+    {
+        if ($this->galeries->removeElement($galery)) {
+            // set the owning side to null (unless already changed)
+            if ($galery->getUser() === $this) {
+                $galery->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+    
 }
-
-

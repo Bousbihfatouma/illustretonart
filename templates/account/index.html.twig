@@ -1,0 +1,33 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1> Bienvenue {{ app.user.nom }} {{ app.user.prenom }} dans ton espace perso</h1>
+    <h2>{{ app.user.roles | join(', ') }}</h2>
+
+    <h4>Modifie tes publications </h4>
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        {% if app.user.profileImage %}
+           <img src="{{ asset('uploads/images/' ~ app.user.profileImage) }}" alt=" Image">
+        {% endif %}
+
+        <button type="submit">Enregistrer</button>
+    {{ form_end(form) }}
+
+    <hr />
+
+    <h2 style="text-decoration:underline;">Commencer à discuter avec des artistes</h4>
+
+    {% for user in users %}
+        <ul>
+            <li>
+                <a href="{{ path('conversation_add', {id: user.id}) }}">
+                    Discuter avec {{ user.prenom }}
+                </a>
+            </li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}

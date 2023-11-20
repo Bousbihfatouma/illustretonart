@@ -1,5 +1,30 @@
 {
   "dependencies": {
-    "slick-carousel": "^1.8.1"
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1",
+    "leaflet": "^1.9.4",
+    "popper.js": "^1.16.1",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "slick-carousel": "^1.8.1",
+    "headless-elements": "^0.0.2",
+    "moment": "^2.29.4",
+    "preact": "^10.16.0",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^4.5.0",
+    "webpack-notifier": "1.15.0",
+    "babel-plugin-jsx-pragmatic": "^1.0.2",
+    "@babel/core": "^7.22.11",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
+    "@babel/preset-env": "^7.22.14"
+  },
+  "scripts": {
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
   }
 }

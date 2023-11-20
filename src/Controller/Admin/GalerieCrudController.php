@@ -39,12 +39,18 @@ class GalerieCrudController extends AbstractCrudController
            IdField::new('id')->onlyOnIndex(),
             TextField::new('nom'),
             TextField::new('prenom'),
+
             EmailField::new('email'),
             TextEditorField::new('aPropos'),
             TextField::new('titre'),
             TextEditorField::new('descriptionimage'),
             TextField::new('titreimage'),
-            ImageField::new('image')->setUploadDir('C:\\wamp64\\www\illustretonart\public\uploads\images')->setBasePath('/uploads/images')
+           
+            ImageField::new('image')
+           ->setBasePath('uploads/images/') // Répertoire où sont stockées les images
+           ->setUploadDir('%kernel.project_dir%/public/uploads/images') // Répertoire de téléchargement complet
+           ->setUploadedFileNamePattern('[randomhash].[extension]') // Modèle de nommage des fichiers
+           
         ];
     }
     

@@ -1,0 +1,307 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChristelleblogController!{% endblock %}
+
+
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>article fatouma</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy&amp;display=swap">
+    <!-- gLightbox CSS-->
+    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">                   
+      <nav class="navbar navbar-expand-lg navbar-light py-4 index-forward bg-white">
+        <div class="container d-flex justify-content-center justify-content-lg-between align-items-center">
+          <ul class="list-inline small mb-0 text-dark d-none d-lg-block">
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+          </ul><a class="navbar-brand" href="index.html"><img src="{{ asset('images/logoart.png') }}" alt="..." width="250"></a><a class="reset-anchor text-sm mb-0 h6 d-none d-lg-block" href="mailto:Juliette@email.com"><i class="far fa-envelope me-2 text-primary"></i>contactillustretonart@email.com</a>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light border-top border-bottom border-light">
+        <div class="container">
+          <ul class="list-inline small mb-0 text-dark d-block d-lg-none">
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <!-- Navbar link--><a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="listingVariants" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog Listing</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="listingVariants"><a class="dropdown-item" href="listing-1.html">Post column</a><a class="dropdown-item" href="listing-2.html">Post row</a></div>
+              </li>
+              <li class="nav-item">
+                <!-- Navbar link--><a class="nav-link active" href="post.html">Blogpost</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pages" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="pages"><a class="dropdown-item" href="index.html">Home</a><a class="dropdown-item" href="listing-1.html">Listing</a><a class="dropdown-item" href="post.html">Post</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row text-center">
+          <div class="col-lg-8 mx-auto"><a class="category-link mb-3 d-inline-block" href="#!">Inspiration</a>
+            <h1>"Exploration Artistique : Les Bijoux Éthiques à l'Honneur des Civilisations Africaines par Christelle"</h1>
+            <p>Dans un monde où l'art rencontre l'éthique, Christelle s'inspire des richesses culturelles des civilisations africaines pour créer des bijoux d'une beauté authentique. Chaque pièce est le reflet d'un héritage riche et d'une vision artistique qui transcende les frontières. À travers son travail, elle nous emmène dans un voyage à travers le temps, capturant l'âme des traditions africaines et les réinventant avec un profond respect pour la nature et les communautés qui les ont inspirées. Chaque bijou devient ainsi une déclaration d'élégance et d'éthique, un témoignage de l'harmonie entre l'art et la culture.</p>
+            <ul class="list-inline mb-5">
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#!">BY Christelle</a></li>
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#!">10 octobre 2023</a></li>
+            </ul>
+          </div>
+        </div><img class="w-100 mb-5" src="{{ asset('../../../images/ethic.jpg') }}"  alt="...">
+        <div class="row gy-5">
+          <div class="col-lg-9">
+            <p class="lead drop-caps mb-5">La richesse de l'art africain réside dans ses bijoux, qui servent de témoins d'une tradition artistique ancestrale. Les bijoux africains, imprégnés d'une diversité culturelle et de significations profondes, sont de véritables œuvres d'art. Chaque pièce est une manifestation de la créativité, de la spiritualité et de l'histoire de l'Afrique. Les artisans africains maîtrisent l'art de l'ornementation, utilisant une variété de matériaux, des perles aux métaux précieux, pour créer des bijoux uniques. Ces pièces ne sont pas seulement des objets décoratifs, mais elles portent en elles des symboles et des récits qui racontent l'identité, la croyance, et la beauté de chaque culture africaine. L'art africain dans les bijoux est une véritable célébration de la diversité et de la créativité humaine, qui perdure à travers les générations, tout en inspirant le monde entier.</p>
+            <h2>"Christelle : L'Artiste Qui Forge des Liens, Crée de la Beauté, et Change des Vies en Afrique"</h2>
+            <p class="mb-4">""Créations Éthiques de Bijoux Inspirées par les Civilisations Africaines par Christelle"</p>
+            <div class="row">
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/tropbelle.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/filleprincessafrica.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/bella.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/mamafrica.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/ebene.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/masaijpg.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/adorable.jpg') }}" alt=""></a></div>
+                <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/tropmignon.jpg') }}" alt=""></a></div>
+            </div>
+            <p class="text-muted mb-4">la collection de bijoux de Christelle est bien plus qu'une simple exposition artistique. C'est un voyage inspirant à travers les traditions et la créativité des civilisations africaines. Les bijoux incarnent la fusion harmonieuse entre l'art, l'éthique et le respect des coutumes les plus anciennes de l'Afrique. En parallèle, le travail de Christelle transcende la bijouterie pour faire une différence significative dans la vie des familles en précarité en Afrique. Son engagement envers l'artisanat éthique et son soutien aux communautés locales sont des preuves tangibles de son impact positif. En portant un bijou de la collection de Christelle, on devient le gardien de cette tradition tout en contribuant à un avenir meilleur pour ceux qui en ont le plus besoin. C'est un héritage précieux et une vision lumineuse qui perdurent à travers chaque pièce, rappelant que l'art et la compassion peuvent réellement changer le monde.</p>
+            <h3>Ce qui faut retenir</h3>
+            <ul class="list-bullets mb-5">
+              <li>La collection de Christelle célèbre l'art et l'éthique dans les bijoux inspirés par l'Afrique. </li>
+              <li> Les bijoux incarnent une fusion harmonieuse entre l'art et les coutumes anciennes africaines.</li>
+              <li>Les créations de Christelle transcendent la simple bijouterie pour avoir un impact social positif.</li>
+              <li>L'art et la compassion peuvent réellement changer le monde.</li>
+            </ul>
+            <figure class="bg-light p-4 p-lg-5 text-center mb-5">
+              <blockquote class="blockquote">
+                <p class="h4 mb-5">"Chaque pièce raconte une histoire de tradition, d'innovation et d'espoir pour un avenir meilleur" </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                <cite class="fst-normal" title="Source Title">Christelle</cite>
+              </figcaption>
+            </figure>
+            <p class="mb-5"> Le blog de Christelle est une immersion captivante dans l'univers de la bijouterie éthique inspirée par les civilisations africaines. Christelle, une artiste passionnée, transcende les frontières de la créativité en combinant son talent artistique avec un profond respect pour les coutumes ancestrales de l'Afrique. Sa collection de bijoux incarne l'harmonie entre l'art et l'éthique, célébrant la beauté et l'individualité tout en préservant la richesse culturelle de l'Afrique.
+
+Chaque pièce de sa collection est bien plus qu'un simple ornement. Elle raconte une histoire, reflétant l'âme des traditions africaines tout en s'inspirant des motifs et des matériaux locaux. L'art de Christelle sert également un noble objectif, car elle s'engage activement à soutenir des familles en précarité en Afrique à travers son travail d'artisanat éthique. Sa passion va au-delà de la création de bijoux ; elle crée des liens, change des vies et construit un avenir meilleur pour les communautés locales.
+
+Le blog de Christelle est une vitrine de son dévouement à l'art, à l'éthique et à l'humanité. Chaque article explore les influences culturelles, les techniques artisanales et les histoires derrière ses bijoux. Ses créations uniques sont le reflet de son engagement envers l'innovation, la préservation des traditions et la célébration de la diversité culturelle de l'Afrique. L'artiste a également à cœur de sensibiliser son public à l'importance de l'artisanat éthique et de l'impact positif qu'il peut avoir sur les communautés.
+
+En fin de compte, le blog de Christelle est une source d'inspiration, de beauté et d'espoir. Il nous rappelle que l'art peut transcender les frontières et changer des vies, tout en préservant l'authenticité et la richesse de la culture africaine. L'œuvre de Christelle est une preuve vivante que l'art et l'éthique peuvent converger pour créer un impact significatif, non seulement dans le monde de la bijouterie, mais aussi dans le monde qui nous entoure.</p>
+            <!-- Post tags-->
+            <div class="d-flex align-items-center flex-column flex-sm-row mb-4 p-4 bg-light">
+              <h3 class="h4 mb-3 mb-sm-0">Tags</h3>
+              <ul class="list-inline mb-0 ms-0 ms-sm-3">
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Art</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">designerjewelry</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Africa</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">fashion</a></li>
+              </ul>
+            </div>
+            <!-- Post share-->
+            <div class="d-flex align-items-center flex-column flex-sm-row mb-5 p-4 bg-light">
+              <h3 class="h4 mb-3 mb-sm-0">Share this post</h3>
+              <ul class="list-inline mb-0 ms-0 ms-sm-3">
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share facebook" href="#!"><i class="fab me-2 fa-facebook-f"></i>Share</a></li>
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share twitter" href="#!"><i class="fab me-2 fa-twitter"></i>Tweet</a></li>
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share instagram" href="#!"><i class="fab me-2 fa-instagram"></i>Share</a></li>
+              </ul>
+            </div>
+            <!-- Leave comment-->
+            <h3 class="h4 mb-4">Leave a comment</h3>
+            <form class="mb-5">
+              <div class="row gy-3">
+                <div class="col-lg-6">
+                  <input class="form-control" type="text" name="name" placeholder="Full Name e.g. Jason Doe">
+                </div>
+                <div class="col-lg-6">
+                  <input class="form-control" type="email" name="email" placeholder="Email Address e.g. Jason@email.com">
+                </div>
+                <div class="col-lg-12">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Leave your message"></textarea>
+                </div>
+                <div class="col-lg-12">
+                  <button class="btn btn-primary" type="submit">Submit your comment</button>
+                </div>
+              </div>
+            </form>
+            <!-- Post comments-->
+            <h3 class="h4 mb-4">Comments</h3>
+            <ul class="list-unstyled comments">
+              <li>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-1.jpg" alt="Jimmy Roy" width="60"/></div>
+                  <div class="ms-3">
+                    <p class="small mb-0 text-primary fw-normal">15 Aug 2019</p>
+                    <h5>Jimmy Roy</h5>
+                    <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                  </div>
+                </div>
+                <ul class="list-unstyled ms-5">
+                  <li> 
+                    <div class="d-flex mb-4">
+                      <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-2.jpg" alt="Melissa Johanson" width="60"/></div>
+                      <div class="ms-3">
+                        <p class="small mb-0 text-primary fw-normal">15 Sep 2019</p>
+                        <h5>Melissa Johanson</h5>
+                        <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-3.jpg" alt="David Nguyen" width="60"/></div>
+                  <div class="ms-3">
+                    <p class="small mb-0 text-primary fw-normal">10 Oct 2019</p>
+                    <h5>David Nguyen</h5>
+                    <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Blog sidebar-->
+          <div class="col-lg-3">
+            <!-- About category-->
+            <div class="card bg-light mb-4 py-lg-4">
+              <div class="card-body text-center">
+                <h2 class="h3 mb-3">About me</h2><img class="rounded-circle mb-3" src="{{ asset('../../../images/masoeurafricaine.jpg') }}" alt="..." width="100">
+                <p class="text-sm text-muted">"Je m'appelle Christelle, une artiste passionnée et créative, inspirée par les riches coutumes et cultures des civilisations africaines. Ma vie est un voyage continu à la recherche de l'harmonie entre l'art, l'éthique et la beauté. Mon travail artistique prend forme dans la création de bijoux uniques qui célèbrent la diversité culturelle de l'Afrique et honorent les traditions anciennes.
+
+Chaque pièce de ma collection est un hommage à l'artisanat traditionnel africain, mêlant des motifs et des matériaux locaux pour créer des bijoux authentiques. Mon engagement envers l'artisanat éthique va au-delà de la création de bijoux ; il englobe également la transformation de vies. Je suis déterminée à soutenir les familles en précarité en Afrique grâce à mon travail et à faire en sorte que chaque achat contribue à un avenir meilleur pour ces communautés.
+
+Sur mon blog, je partage non seulement l'histoire derrière chaque bijou, mais aussi mon voyage artistique, ma quête d'inspiration et ma passion pour l'art africain. Je crois en l'importance de sensibiliser mon public à l'impact positif de l'artisanat éthique et de célébrer la richesse culturelle de l'Afrique à travers mes créations.
+
+Mon objectif est de créer des bijoux qui transcendent les frontières et les époques, tout en servant de lien entre l'art, l'éthique et l'humanité. Je suis convaincue que l'art peut changer le monde, une pièce à la fois, et c'est ce qui me motive chaque jour.
+
+Merci de me rejoindre dans ce voyage artistique et éthique. Ensemble, nous pouvons faire une différence et célébrer la beauté de la culture africaine."</p>
+                <ul class="list-inline small mb-0 text-dark">
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Recent posts-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Recent posts</h2>
+                <div class="d-flex mb-3"><a class="flex-shrink-0" href="post.html"><img class="img-fluid" src="img/recent-post-1.jpg" alt="" width="70"></a>
+                  <div class="ms-3">
+                    <h6> <a class="reset-anchor" href="post.html">Crazy goodness</a></h6>
+                    <p class="text-sm text-muted lh-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+                <div class="d-flex mb-3"><a class="flex-shrink-0" href="post.html"><img class="img-fluid" src="img/recent-post-2.jpg" alt="" width="70"></a>
+                  <div class="ms-3">
+                    <h6> <a class="reset-anchor" href="post.html">Black hat</a></h6>
+                    <p class="text-sm text-muted lh-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+                <div class="d-flex mb-3"><a class="flex-shrink-0" href="post.html"><img class="img-fluid" src="img/recent-post-3.jpg" alt="" width="70"></a>
+                  <div class="ms-3">
+                    <h6> <a class="reset-anchor" href="post.html">My office makeover</a></h6>
+                    <p class="text-sm text-muted lh-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Trending categories</h2><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-1.jpg)" href="#!"><span class="category-block-title">Interior Design</span></a><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-2.jpg)" href="#!"><span class="category-block-title">Fashion</span></a><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-3.jpg)" href="#!"><span class="category-block-title">Tips &amp; Tricks</span></a>
+              </div>
+            </div>
+            <!-- Tags-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Tags cloud</h2>
+                <ul class="list-inline">
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Art</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">designer</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">bijouterie</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">jewelry</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">desert</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Inspiration</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Business</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Ad-->
+            <div class="card mb-4">
+              <div class="card-body p-0"><a class="d-block" href="#!"><img class="img-fluid" src="img/banner.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-4" style="background: #111">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-lg-start"><img src="img/logo-footer.svg" alt="..." width="120"></div>
+          <div class="col-md-4 text-center">
+            <div class="d-flex align-items-center flex-wrap justify-content-center">
+              <h6 class="text-muted mb-0 py-2 me-3">Follow me<span class="ms-3">-</span></h6>
+              <ul class="list-inline small mb-0 text-white">
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 text-lg-end">
+            <p class="mb-0 text-muted text-sm text-heading">Template designed by <a href="https://bootstrapious.com/p/juliette-bootstrap-feminine-blog-template" class="text-primary">Bootstrapious</a>. </p>
+            <!-- If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!-->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="js/front.js"></script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>
+
+
+
+{% endblock %}

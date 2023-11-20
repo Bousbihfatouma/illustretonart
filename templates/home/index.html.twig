@@ -1,5 +1,38 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
+  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+            
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+
+    <title>Hello, world!</title>
   <div id="home-page">
 <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-info navbar-dark">
@@ -12,36 +45,35 @@
         <!-- Navigation Links -->
         <ul class="navbar-nav me-auto">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Accueil</a>
+                <a class="nav-link text-dark" href="#">Accueil</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownArtist" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownArtist" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Artiste Peintre
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownArtist">
-                    <li><a class="dropdown-item" href="#">Blog</a></li>
-                    <li><a class="dropdown-item" href="#">Galerie</a></li>
-                    <li><a class="dropdown-item" href="#">Événement</a></li>
+                    <li><a class="dropdown-item" href="{{path('app_peintreblog')}}">Blog</a></li>
+                    <li><a class="dropdown-item"href="{{path('app_galeriepeintre')}}" >Galerie</a></li>
+                    <li><a class="dropdown-item"href="{{path('app_map')}}" >Événement</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownDesigner" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownDesigner" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Designer Bijouterie
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownDesigner">
-                    <li><a class="dropdown-item" href="#">Blog</a></li>
-                    <li><a class="dropdown-item" href="#">Galerie</a></li>
+                   <a class="dropdown-item" href="{{ path('app_blog') }}">Blog</a>
+                    <li><a class="dropdown-item" href="{{ path('app_galerie') }}">Galerie</a></li>
                        <li class="dropdown-divider"></li> <!-- Ligne de séparation -->
-                     <li><a class="dropdown-item" href="#">Liste d'Artistes</a></li>
-                    <li><a class="dropdown-item" href="#">Événement</a></li>
+                     <li><a class="dropdown-item" href="#">Événement</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownPhotographe" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownPhotographe" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Photographe Art
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownPhotographe">
-                    <li><a class="dropdown-item" href="#">Blog</a></li>
+                    <li><a class="dropdown-item" href="{{path('app_blogphotographe')}}" >Blog</a></li>   
                     <li><a class="dropdown-item" href="#">Galerie</a></li>
                     <li><a class="dropdown-item" href="#">Événement</a></li>
                 </ul>
@@ -50,30 +82,29 @@
         <!-- Icons -->
         <ul class="navbar-nav d-flex flex-row me-1">
         <!-- Ajoutez cet élément de liste pour "S'inscrire" -->
-            <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link text-dark" href="{{ path('app_register') }}">S'inscrire</a>
-            </li>
-            
+          </li>
         </ul>
         <ul class="navbar-nav d-flex flex-row me-1">
             <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link text-white" href="#"><i class="fas fa-envelope mx-1"></i> Contact</a>
+                <a class="nav-link text-dark" href="#"><i class="fas fa-envelope mx-1"></i> Contact</a>
             </li>
             <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link text-white" href="#"><i class="fas fa-cog mx-1"></i> Settings</a>
+                <a class="nav-link text-dark" href="{{ path('app_admin_login') }}"><i class="fas fa-cog mx-1"></i> Settings</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user mx-1"></i> Profile
                 </a>
                 <!-- Dropdown menu -->
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownProfile">
                     <li>
-                       <a class="dropdown-item" href="{{ path('app_login') }}">Mon compte</a>
+                       <a class="dropdown-item" href="{{ path('account_index') }}">Mon compte</a>
 
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Log out</a>
+                        <a class="dropdown-item"href="{{path('app_logout')}}" >Log out</a>
                     </li>
                 </ul>
             </li>
@@ -81,165 +112,436 @@
     </div>
     <!-- Container wrapper -->
 </nav>
-<!-- slidder-->
-    <div class="slider">
-      <div class="slide">
-        <img src="{{ asset('../../../images/slide1.png') }}"/>
-        <p>01</p>
-      </div>
-      <div class="slide2">
-        <img src="{{ asset('../../../images/slidereseau.png') }}"/>
-        <p>02</p>
-      </div>
-      <div class="slide">
-      <img src="{{ asset('../../../images/slide3.png') }}"/>
-        <p>03</p>
-      </div>
-      <div class="slide2">
-       <img src="{{ asset('../../../images/slide4.png') }}"/>
-      </div>
-      <div class="slide">
-       <img src="{{ asset('../../../images/slide4.png') }}"/>
-        <p>05</p>
-      </div>
-      <div class="slide2">
-       <img src="{{ asset('../../../images/slide5.png') }}"/>
-        <p>06</p>
-      </div>
+  <!-- slider-->
+ <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{{ asset('images/slide4.png') }}" alt="First slide">
     </div>
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-github"></i>
-      </a>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ asset('images/slide2.png') }}" alt="Second slide">
     </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ asset('images/slide6.png') }}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3 text-secondary"></i>Illustretonart
-          </h6>
-          <p>
-           "Explorez votre art, enrichissez votre talent. 🎨
-          Notre site est entièrement gratuit pour soutenir la communauté artistique. Nous sommes là pour répondre à vos questions et vous offrir notre service dévoué.
-          Votre créativité est notre passion. ✨
-           Rejoignez-nous pour grandir ensemble."
+  <main id="main">
 
-</p>
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 video-box">
+            <img src="{{ asset('images/aboutus.jpg') }}"class="img-fluid" width="90%"alt=""  >
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+            <div class="section-title">
+              <h2>About Us</h2>
+              <p>Bonjour, je m'appelle Fatouma Bousbih, et je suis passionnée par l'art. Je suis déterminée à revoir en profondeur un concept qui existe depuis longtemps : une communauté d'artistes où leur visibilité est plus cohérente qu'à travers les réseaux sociaux avec leurs règles strictes de followers et le dédale de hashtags, où la probabilité qu'une personne découvre votre travail est souvent minime.Je rêve de créer une plateforme gratuite qui permettrait des dialogues en temps réel et offrirait à tous la chance de se faire connaître. J'ai moi-même expérimenté les réseaux sociaux, et bien qu'ils aient leur place, je pense qu'il manque quelque chose d'essentiel : une plateforme qui soit à la fois un musée virtuel et une base de données centralisée pour tous les artistes, devenant ainsi une référence incontournable.Est-ce possible ? Seul le temps nous le dira. Mais je suis convaincue que, grâce à notre dévouement et à la passion de la communauté artistique, nous pouvons créer un espace où l'art et les artistes trouvent la visibilité qu'ils méritent, tout en préservant l'intégrité artistique et la convivialité. Rejoignez-nous dans cette aventure passionnante vers un avenir où l'art sera à portée de main pour tous.</p>
+            </div>
+
+           
+
+          </div>
         </div>
-        <!-- Grid column -->
 
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Angular</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">React</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
-          </p>
-        </div>
-        <!-- Grid column -->
+      </div>
+    </section><!-- End About Us Section -->
 
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Pricing</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div>
-        <!-- Grid column -->
+    <!-- ======= About Lists Section ======= -->
+    <section class="about-lists">
+      <div class="container">
 
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3 text-secondary"></i> Paris France</p>
-          <p>
-            <i class="fas fa-envelope me-3 text-secondary"></i>
-            fatoumabousbih@yahoo.fr
-          </p>
-          <p><i class="fas fa-phone me-3 text-secondary"></i> 0625766296</p>
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+          <img src="{{ asset('images/picasso9.jpg') }}">
+            <span></span>
+            <h4>TAG</h4>
+            <p>Picasso</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+             <img src="{{ asset('images/touareg.jpg') }}">
+            <span></span>
+            <h4>TAG</h4>
+            <p>désert</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+             <img src="{{ asset('images/vintagefemme.jpg') }}" width="200" height="250">
+            <span></span>
+            <h4>TAG</h4>
+            <p>Vintage</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="{{ asset('images/dior.png') }}" width="200" height="200">
+            <span></span>
+            <h4>TAG</h4>
+            <p>Dior</p>
+          </div>
           
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="{{ asset('images/vegetal.png') }}" width="200" height="250">
+            <span></span>
+            <h4>TAG</h4>
+            <p>vegetal</p>
+          </div>
+        
+
+         <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="{{ asset('images/paris.png') }}" width="200" height="250">
+            <span></span>
+            <h4>TAG</h4>
+            <p>Paris</p>
+          </div>
+
         </div>
-        <!-- Grid column -->
+
       </div>
-      <!-- Grid row -->
+    </section><!-- End About Lists Section -->
+
+    /div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="icofont-computer"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="icofont-earth"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="icofont-image"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="icofont-settings"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="icofont-tasks-alt"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+   
+
+    
+    <!-- End Our Portfolio Section -->
+  
+       <section id="team" class="team">
+      <div class="container">
+
+
+        <div class="section-title">
+          <h2>LES NOUVEAUX INSCRITS</h2>
+          <p>Devenir un Nouveau Membre pour Accroître votre Visibilité au sein de la Communauté </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <class= class="pic"><img src="{{ asset('images/masoeurafricaine.jpg') }}"width="900" height="80"class="img-fluid" alt="">
+              <div class="member-info">
+                <h4>Christelle</h4>
+                <p>designer jewelry</p>
+               </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="pic"><img src="{{ asset('images/josephine.jpg') }}"width="900" height="80"class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Joséphine</h4>
+                <span>designer jewelry</span>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="pic"><img src="{{ asset('images/picasso1.jpg') }}"width="400" height="60" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Christopher </h4>
+                <span>Peintre</span>
+               </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="{{ asset('images/bellemulan.jpg') }}"width="900" height="80" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Mulan</h4>
+                <span>designer jewelry</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+     
+    
+    </section><!-- End Our Team Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Questions fréquentes </h2>
+        </div>
+
+        <div class="row  d-flex align-items-stretch">
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up">
+            <h4>Est-ce que l'inscription sur illustretonart est gratuite ?</h4>
+            <p>
+             Oui, l'inscription sur illustretonart est entièrement gratuite pour les artistes et les amateurs d'art. Nous croyons en l'accessibilité de l'art pour tous.
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
+            <h4>Quels types d'artistes peuvent rejoindre illustretonart ? Y a-t-il des critères de sélection ?</h4>
+            <p>
+             Jusqu'à présent, notre plateforme s'est concentrée sur les catégories de designers, de bijoutiers, de peintres et de photographes, offrant à ces talents artistiques un espace où ils peuvent s'épanouir, partager leur créativité et interagir avec une communauté passionnée. Cependant, nous sommes ravis de vous annoncer que nous élargissons nos horizons et que de nouvelles catégories artistiques passionnantes seront bientôt disponibles. 
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="200">
+            <h4>Comment puis-je contacter le support client en cas de problème ou de question ?</h4>
+            <p>
+            Vous pouvez contacter notre support client via notre page de contact ou par le biais de notre système de messagerie interne. Nous sommes là pour vous aider.
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="300">
+            <h4>Comment les utilisateurs peuvent-ils interagir en temps réel sur la plateforme ?</h4>
+            <p>
+             Notre plateforme offre des fonctionnalités de chat en temps réel qui permettent aux artistes et aux amateurs d'art d'interagir, de discuter de l'art, de poser des questions et de créer des connexions significatives.
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="400">
+            <h4>Comment puis-je télécharger mes œuvres d'art sur la plateforme ?</h4>
+            <p>
+             Vous pouvez télécharger vos œuvres directement depuis votre profil artistique. Il vous suffit de suivre les instructions pour ajouter des images de haute qualité de vos œuvres.
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="500">
+            <h4>Qu'est-ce qu'illustretonart et en quoi est-il différent des autres plateformes artistiques en ligne ?</h4>
+            <p>
+              Illustretonart est une plateforme artistique en ligne dédiée à créer une communauté où les artistes peuvent présenter leurs œuvres, interagir en temps réel et gagner en visibilité. Contrairement aux réseaux sociaux traditionnels, illustrétonart se concentre sur l'art, offrant un environnement sans distractions, favorisant une visibilité artistique cohérente et encourageant la découverte de nouveaux talents.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contactez nous</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="info-box">
+             
+            </div>
+          </div>
+
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="info-box">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contactillustretonart@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-box ">
+             
+            </div>
+          </div>
+
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-lg-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+            
+              <div class="text-center"><button type="submit">Envoyez le message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-info">
+                   
+                    <p>🎨✨ "Bienvenue sur illustretonart, notre espace dédié à l'art, où chaque coup de pinceau et chaque idée prennent vie! Ici, nous vous invitons à illustrer votre art et à rassembler gratuitement une communauté d'artistes passionnés. Explorez nos ressources artistiques, échangez des techniques, et partagez vos œuvres pour une expérience artistique enrichissante. Découvrez une palette infinie d'outils, d'inspiration et de créativité pour nourrir votre passion. Ensemble, nous façonnons le monde de l'art, ajoutant de la profondeur à chaque toile, de la mélodie à chaque note, et de la magie à chaque création. Rejoignez-nous dans cette aventure artistique où chaque détail compte, et chaque artiste a sa place pour briller! 🌟🖌️🌆📚💡🤝</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class "facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Accueil</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">À propos de nous</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Conditions d'utilisation</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Notre Newsletter</h4>
+                    <p>📬 "Soyez au cœur de l'art en vous abonnant à la newsletter Illustre ton art ! Ne manquez jamais une seule mise à jour artistique, des expositions inspirantes aux ateliers interactifs, des concours artistiques aux histoires captivantes. Notre newsletter est le moyen idéal pour rester connecté avec notre communauté artistique florissante. Recevez directement dans votre boîte de réception l'inspiration, les astuces et les opportunités qui enrichiront votre voyage créatif. Rejoignez-nous pour célébrer l'art dans toute sa splendeur, abonnez-vous dès aujourd'hui et laissez votre créativité s'épanouir ! 🎨🌟📢🖌️🔒</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </section>
-  <!-- Section: Links  -->
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Illustretonart</span></strong>. Tous droits réservés.
+        </div>
+    </div>
+</footer>
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+ <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
 
  
-</footer>
-<!-- Footer -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="{{ asset('node_modules/slick-carousel/slick1.8.1/slick.min.js') }}"></script>
 
 
 
-
-
-
+      
+  
 <script>
- $(document).ready(function() {
-            $('.slider').slick({
-                infinite: true,
-                dots: true,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                fade: true,
-                fadeSpeed: 1000,
-            });
-        });
-</script>
-</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="{{ asset('js/jqueryhome.js') }}"></script>
+
+  </script>
+
+
+
+</html>
     
   {% endblock %}
         

@@ -1,0 +1,287 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChristopherblogController!{% endblock %}
+
+
+
+
+
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>article Paris</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy&amp;display=swap">
+    <!-- gLightbox CSS-->
+    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">                   
+      <nav class="navbar navbar-expand-lg navbar-light py-4 index-forward bg-white">
+        <div class="container d-flex justify-content-center justify-content-lg-between align-items-center">
+          <ul class="list-inline small mb-0 text-dark d-none d-lg-block">
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+          </ul><a class="navbar-brand" href="index.html"> <img src="{{ asset('images/logoart.png') }}" alt="Logo du site" width="500" height="200"></a><a class="reset-anchor text-sm mb-0 h6 d-none d-lg-block" href="mailto:Juliette@email.com"><i class="far fa-envelope me-2 text-primary"></i>contactillustretonart@email.com</a>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light border-top border-bottom border-light">
+        <div class="container">
+          <ul class="list-inline small mb-0 text-dark d-block d-lg-none">
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <!-- Navbar link--><a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="listingVariants" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog Listing</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="listingVariants"><a class="dropdown-item" href="listing-1.html">Post column</a><a class="dropdown-item" href="listing-2.html">Post row</a></div>
+              </li>
+              <li class="nav-item">
+                <!-- Navbar link--><a class="nav-link active" href="post.html">Blogpost</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pages" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="pages"><a class="dropdown-item" href="index.html">Home</a><a class="dropdown-item" href="listing-1.html">Listing</a><a class="dropdown-item" href="post.html">Post</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row text-center">
+          <div class="col-lg-8 mx-auto"><a class="category-link mb-3 d-inline-block" href="#!">Inspiration</a>
+            <h1>Les Pinceaux Magiques de Christopher Mudgett : Réinventer l'Art avec Picasso</h1>
+            <p> Dans l'univers de l'art contemporain, Christopher Mudgett se distingue comme un alchimiste créatif, redéfinissant les limites de l'expression artistique tout en honorant l'héritage de Picasso. À travers ses pinceaux magiques, Mudgett insuffle une nouvelle vie aux toiles, mêlant audacieusement les éléments cubistes et abstraits, tout en capturant l'essence de Picasso d'une manière tout à fait singulière. Son travail passionnant transcende les frontières de la créativité, invitant les spectateurs à explorer un monde artistique éblouissant où l'innovation et l'héritage se fondent en une fusion artistique inoubliable. Avec Christopher Mudgett, l'art trouve une nouvelle voix, repoussant les limites de la tradition pour créer une expérience visuelle à la fois intemporelle et contemporaine.</p>
+            <ul class="list-inline mb-5">
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#!">BY administrateur du site</a></li>
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#!">25 octobre 2023</a></li>
+            </ul>
+          </div>
+        </div><img class="w-100 mb-5" src="{{ asset('../../../images/intro.jpg')}}"  alt="...">
+        <div class="row gy-5">
+          <div class="col-lg-9">
+            <p class="lead drop-caps mb-5"></p>
+            <h2>"La Résurrection de Picasso : L'Œuvre Éblouissante de Christopher Mudgett"</h2>
+            <p class="mb-4"> Dans un tourbillon artistique captivant, Christopher Mudgett s'élève telle une force créative incontournable, offrant au monde une renaissance époustouflante de l'héritage de Picasso. Son œuvre est une célébration magistrale de la maîtrise artistique et de l'innovation, où les toiles se transforment en autels de créativité. Avec une habileté sans pareille, Mudgett réinvente la vision de Picasso, fusionnant ses éléments distinctifs dans un langage visuel captivant et contemporain. Ses créations évoquent une profonde admiration pour le passé tout en propulsant l'art vers l'avenir. À travers ses coups de pinceau habiles et sa vision novatrice, Christopher Mudgett incarne un véritable héritier de Picasso, laissant le monde de l'art en émerveillement devant sa capacité à redonner vie à un géant artistique et à écrire son propre chapitre dans l'histoire de l'art moderne.</p>
+            <div class="row">
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/love.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/picasso1.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/picasso2.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/picasso3.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/picasso5.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/picasso6.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/picasso8.jpg') }}" alt=""></a></div>
+                <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/picasso7.jpg') }}" alt=""></a></div>
+            </div>
+            <p class="text-muted mb-4">Christopher Mudgett, à travers son travail artistique captivant, réussit à tisser un lien intemporel entre l'audace de l'art contemporain et l'héritage des grands maîtres. Ses toiles audacieuses sont un témoignage de sa capacité à réinventer et à redéfinir les normes artistiques tout en honorant les influences du passé, en particulier celles de Picasso. L'œuvre de Mudgett est une célébration de la créativité sans limites, de l'expérimentation audacieuse et de l'expression artistique authentique. Ses toiles transcendent le temps et les frontières, invitant les spectateurs à explorer un monde d'émotions et de perspectives uniques. En fin de compte, les œuvres de Christopher Mudgett sont un rappel inspirant de la puissance de l'art pour créer des ponts entre les époques et les cultures, captivant le cœur et l'esprit de tous ceux qui ont le privilège de les contempler.</p>
+            <h3>Ce qui faut retenir</h3>
+            <ul class="list-bullets mb-5">
+              <li>Ce qu'il faut retenir des œuvres de Christopher Mudgett, c'est leur capacité à réconcilier le passé et le présent de l'art. </li>
+              <li>Mudgett parvient à fusionner les influences des grands maîtres, en particulier Picasso, avec une vision artistique contemporaine et novatrice</li>
+              <li>Son travail incarne l'audace, l'expérimentation et l'authenticité artistique, créant des toiles qui transcendent les limites du temps et de la culture.  </li>
+              <li> En somme, les œuvres de Christopher Mudgett sont un rappel puissant de la manière dont l'art peut servir de pont entre les époques, captivant les émotions et les perspectives de ceux qui les contemplent.</li>
+            </ul>
+            <figure class="bg-light p-4 p-lg-5 text-center mb-5">
+              <blockquote class="blockquote">
+                <p class="h4 mb-5">"La peinture, c'est juste un autre moyen de tenir un journal." </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                <cite class="fst-normal" title="Source Title">Picasso</cite>
+              </figcaption>
+            </figure>
+            <p class="mb-5">Christopher Mudgett est un artiste contemporain reconnu pour sa capacité à créer des œuvres qui rappellent celles de Pablo Picasso. Son travail puise dans l'héritage artistique de Picasso, notamment le mouvement cubiste et l'art abstrait, tout en y apportant sa propre interprétation unique. Les toiles de Mudgett incarnent la fragmentation visuelle, l'expérimentation avec les formes et les couleurs, ainsi que l'exploration de la créativité débridée, des éléments chers à l'art de Picasso. En créant des œuvres qui évoquent l'esprit du maître espagnol tout en y ajoutant sa propre perspective artistique, Christopher Mudgett continue à captiver le monde de l'art contemporain en réinterprétant l'héritage de Picasso d'une manière fraîche et innovante.</p>
+            <!-- Post tags-->
+            <div class="d-flex align-items-center flex-column flex-sm-row mb-4 p-4 bg-light">
+              <h3 class="h4 mb-3 mb-sm-0">Tags</h3>
+              <ul class="list-inline mb-0 ms-0 ms-sm-3">
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Art</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">paris</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">picasso</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">peinture</a></li>
+              </ul>
+            </div>
+            <!-- Post share-->
+            <div class="d-flex align-items-center flex-column flex-sm-row mb-5 p-4 bg-light">
+              <h3 class="h4 mb-3 mb-sm-0">Share this post</h3>
+              <ul class="list-inline mb-0 ms-0 ms-sm-3">
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share facebook" href="#!"><i class="fab me-2 fa-facebook-f"></i>Share</a></li>
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share twitter" href="#!"><i class="fab me-2 fa-twitter"></i>Tweet</a></li>
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share instagram" href="#!"><i class="fab me-2 fa-instagram"></i>Share</a></li>
+              </ul>
+            </div>
+            <!-- Leave comment-->
+            <h3 class="h4 mb-4">Leave a comment</h3>
+            <form class="mb-5">
+              <div class="row gy-3">
+                <div class="col-lg-6">
+                  <input class="form-control" type="text" name="name" placeholder="Full Name e.g. Jason Doe">
+                </div>
+                <div class="col-lg-6">
+                  <input class="form-control" type="email" name="email" placeholder="Email Address e.g. Jason@email.com">
+                </div>
+                <div class="col-lg-12">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Leave your message"></textarea>
+                </div>
+                <div class="col-lg-12">
+                  <button class="btn btn-primary" type="submit">Submit your comment</button>
+                </div>
+              </div>
+            </form>
+            <!-- Post comments-->
+            <h3 class="h4 mb-4">Comments</h3>
+            <ul class="list-unstyled comments">
+              <li>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-1.jpg" alt="Jimmy Roy" width="60"/></div>
+                  <div class="ms-3">
+                    <p class="small mb-0 text-primary fw-normal">15 Aug 2019</p>
+                    <h5>Jimmy Roy</h5>
+                    <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                  </div>
+                </div>
+                <ul class="list-unstyled ms-5">
+                  <li> 
+                    <div class="d-flex mb-4">
+                      <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-2.jpg" alt="Melissa Johanson" width="60"/></div>
+                      <div class="ms-3">
+                        <p class="small mb-0 text-primary fw-normal">15 Sep 2019</p>
+                        <h5>Melissa Johanson</h5>
+                        <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-3.jpg" alt="David Nguyen" width="60"/></div>
+                  <div class="ms-3">
+                    <p class="small mb-0 text-primary fw-normal">10 Oct 2019</p>
+                    <h5>David Nguyen</h5>
+                    <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Blog sidebar-->
+          <div class="col-lg-3">
+            <!-- About category-->
+            <div class="card bg-light mb-4 py-lg-4">
+              <div class="card-body text-center">
+                <h2 class="h3 mb-3">About me</h2><img class="rounded-circle mb-3" src="{{ asset('../../../images/picasso1.jpg') }}" alt="..." width="100">
+                <p class="text-sm text-muted">Christopher Mudgett est un artiste contemporain dont le travail est fortement influencé par le style de Pablo Picasso. Ses œuvres capturent l'esprit du maître espagnol, en particulier le mouvement cubiste et l'art abstrait, tout en y apportant sa propre touche distinctive. Comme Picasso, Mudgett explore la fragmentation visuelle, l'expérimentation avec les formes et les couleurs, ainsi que l'expression artistique non conventionnelle. Ses toiles évoquent l'essence de Picasso tout en introduisant des éléments contemporains, créant ainsi une expérience artistique qui résonne avec le public d'aujourd'hui tout en honorant le passé artistique.</p>
+                <ul class="list-inline small mb-0 text-dark">
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Recent posts-->
+            <!-- Recent posts-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Recent posts</h2>
+                <div class="d-flex mb-3"><a class="flex-shrink-0" href="post.html"><img class="img-fluid" src="img/recent-post-1.jpg" alt="" width="70"></a>
+                  <div class="ms-3">
+                    <h6> <a class="reset-anchor" href="{{ path('app_christopherblog') }}"  >Christopher Mudgett : L'Artiste Qui Peint à la Manière de Picasso</a></h6>
+                    <p class="text-sm text-muted lh-sm mb-0">Christopher Mudgett, un talent artistique éblouissant, fascine le monde de l'art contemporain avec sa remarquable capacité à canaliser l'esprit de Picasso à travers ses toiles audacieuses. À travers une fusion innovante de formes, de couleurs et de styles, Mudgett capture l'essence du maître espagnol tout en y apportant sa propre touche unique. Son travail offre une exploration captivante de l'art abstrait, de la fragmentation visuelle et de la créativité débordante. En tant qu'artiste visionnaire, Christopher Mudgett incarne l'héritage de Picasso tout en ouvrant de nouvelles voies dans le monde de l'art moderne, défiant ainsi les conventions et émerveillant les amateurs d'art du monde entier.</p>
+                  </div>
+                </div>
+               
+               
+              </div>
+            </div>
+            <!-- Categories-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Trending categories</h2><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-1.jpg)" href="#!"><span class="category-block-title">Interior Design</span></a><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-2.jpg)" href="#!"><span class="category-block-title">Fashion</span></a><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-3.jpg)" href="#!"><span class="category-block-title">Tips &amp; Tricks</span></a>
+              </div>
+            </div>
+            <!-- Tags-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Tags cloud</h2>
+                <ul class="list-inline">
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Art</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">peinture</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">paint</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">toile</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">oeuvre art</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!"></a>artistes</li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Business</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Ad-->
+            <div class="card mb-4">
+              <div class="card-body p-0"><a class="d-block" href="#!"><img class="img-fluid" src="img/banner.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-4" style="background: #111">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-lg-start"><img src="img/logo-footer.svg" alt="..." width="120"></div>
+          <div class="col-md-4 text-center">
+            <div class="d-flex align-items-center flex-wrap justify-content-center">
+              <h6 class="text-muted mb-0 py-2 me-3">Follow me<span class="ms-3">-</span></h6>
+              <ul class="list-inline small mb-0 text-white">
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 text-lg-end">
+            <p class="mb-0 text-muted text-sm text-heading">Template designed by <a href="https://bootstrapious.com/p/juliette-bootstrap-feminine-blog-template" class="text-primary">Bootstrapious</a>. </p>
+            <!-- If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!-->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="js/front.js"></script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>
+
+
+
+{% endblock %}

@@ -1,0 +1,284 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DiorBlogController!{% endblock %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>article Paris</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy&amp;display=swap">
+    <!-- gLightbox CSS-->
+    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">                   
+      <nav class="navbar navbar-expand-lg navbar-light py-4 index-forward bg-white">
+        <div class="container d-flex justify-content-center justify-content-lg-between align-items-center">
+          <ul class="list-inline small mb-0 text-dark d-none d-lg-block">
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+          </ul><a class="navbar-brand" href="index.html"> <img src="{{ asset('images/logoart.png') }}" alt="Logo du site" width="500" height="200"></a><a class="reset-anchor text-sm mb-0 h6 d-none d-lg-block" href="mailto:Juliette@email.com"><i class="far fa-envelope me-2 text-primary"></i>contactillustretonart@email.com</a>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light border-top border-bottom border-light">
+        <div class="container">
+          <ul class="list-inline small mb-0 text-dark d-block d-lg-none">
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <!-- Navbar link--><a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="listingVariants" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog Listing</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="listingVariants"><a class="dropdown-item" href="listing-1.html">Post column</a><a class="dropdown-item" href="listing-2.html">Post row</a></div>
+              </li>
+              <li class="nav-item">
+                <!-- Navbar link--><a class="nav-link active" href="post.html">Blogpost</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pages" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="pages"><a class="dropdown-item" href="index.html">Home</a><a class="dropdown-item" href="listing-1.html">Listing</a><a class="dropdown-item" href="post.html">Post</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row text-center">
+          <div class="col-lg-8 mx-auto"><a class="category-link mb-3 d-inline-block" href="#!">Inspiration</a>
+            <h1>"Dior Éclat Joaillier : Brillant de Beauté et d'Élégance"</h1>
+            <p>La collection de bijoux Dior Éclat Joaillier incarne une éclatante fusion de créativité, de sophistication et d'artisanat exceptionnel. Les pièces sont conçues pour capturer l'essence intemporelle de la féminité et de l'élégance. Chaque bijou est une œuvre d'art exquise, méticuleusement fabriquée pour célébrer la beauté naturelle de chaque femme. Les créations Dior Éclat Joaillier transcendent les tendances éphémères pour offrir des pièces qui restent gravées dans la mémoire, évoquant la grâce et le raffinement. Que ce soit un collier scintillant, une bague étincelante ou des boucles d'oreilles sophistiquées, chaque bijou Dior est une déclaration d'amour à l'élégance intemporelle, laissant une empreinte de style et d'exclusivité où qu'il soit porté. Avec Dior Éclat Joaillier, l'élégance devient éternelle, incarnée dans chaque précieuse création.</p>
+            <ul class="list-inline mb-5">
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#!">BY administrateur du site</a></li>
+              <li class="list-inline-item mx-2"><a class="text-uppercase text-muted reset-anchor" href="#!">25 octobre 2023</a></li>
+            </ul>
+          </div>
+        </div><img class="w-100 mb-5" src="{{ asset('../../../images/dior.jpg')}}"  alt="...">
+        <div class="row gy-5">
+          <div class="col-lg-9">
+            <p class="lead drop-caps mb-5">Dior, la légendaire maison de couture fondée par Christian Dior en 1946, incarne le summum de l'élégance et du raffinement dans le monde de la mode. Avec une histoire riche de plus de sept décennies, Dior a constamment redéfini les normes de la haute couture en créant des vêtements d'une beauté intemporelle. La griffe Dior est synonyme de coupes impeccables, de tissus somptueux et d'une attention méticuleuse aux détails. La maison a su incarner l'art de la sophistication, tout en restant à la pointe de l'innovation. De la révolutionnaire "New Look" de Dior dans les années 1950 aux collections modernes qui continuent d'inspirer les passionnés de mode du monde entier, Dior est une icône intemporelle qui incarne l'élégance, le glamour et l'art de la haute couture.</p>
+            <h2>"Dior Joaillerie : L'Art de Sublimer la Beauté avec Éclat"</h2>
+            <p class="mb-4">La maison Dior Joaillerie incarne l'essence même du luxe et de l'élégance dans le monde des bijoux. Chaque création de Dior Joaillerie est une œuvre d'art qui marie un savoir-faire exquis, une créativité audacieuse et des matériaux précieux pour créer des pièces d'une beauté à couper le souffle. Les bijoux Dior sont bien plus que de simples accessoires, ce sont des déclarations de style intemporelles qui célèbrent la féminité et la sophistication. Les créations Dior Joaillerie allient tradition et innovation, tout en repoussant les limites de la conception de bijoux. Chaque pièce raconte une histoire unique et incarne la passion de la marque pour l'art et l'excellence, créant ainsi des bijoux qui deviennent des héritages familiaux précieux, transmis de génération en génération. Avec Dior Joaillerie, l'élégance atteint des sommets inégalés, faisant de chaque bijou une véritable œuvre d'art à chérir pour l'éternité.</p>
+            <div class="row">
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/dior2.png') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/dior4.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/dior5.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/dior6.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image one"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/dior9.png') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/dior10.jpg') }}" alt=""></a></div>
+              <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-1.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/dior12.jpg') }}" alt=""></a></div>
+                <div class="col-lg-6 mb-4"><a class="glightbox product-view" href="img/post-demo-2.jpg" data-gallery="gallery" data-glightbox="Image two"><img class="img-fluid img-thumbnail"  src="{{ asset('../../../images/dior14.jpg') }}" alt=""></a></div>
+            </div>
+            <p class="text-muted mb-4"> Dior Joaillerie incarne l'apogée du raffinement, de la créativité et de l'artisanat dans l'univers des bijoux. Chaque pièce de cette maison de haute joaillerie est une expression de la passion pour l'art et l'excellence, où la tradition rencontre l'innovation pour créer des bijoux d'une beauté intemporelle. Les créations Dior transcendent les tendances éphémères pour devenir des héritages précieux, des objets de désir qui incarnent la grâce et l'élégance. Leur savoir-faire méticuleux et leur attention aux détails sont inégalés, ce qui fait de chaque bijou une véritable œuvre d'art. Avec Dior Joaillerie, l'élégance est sublimée et célébrée dans des créations qui continuent de captiver et de ravir les amateurs de bijoux du monde entier, faisant ainsi de Dior Joaillerie une icône intemporelle de l'art joaillier.</p>
+            <h3>Ce qui faut retenir</h3>
+            <ul class="list-bullets mb-5">
+              <li> Dior Joaillerie, c'est son engagement inébranlable envers la création de bijoux d'une beauté intemporelle, alliant tradition et innovation</li>
+              <li>Chaque pièce est une œuvre d'art méticuleusement fabriquée, célébrant l'élégance, la féminité et la sophistication. ></li>
+              <li>Les bijoux Dior transcendent les tendances éphémères pour devenir des héritages précieux, des symboles de style et d'exclusivité. Ils incarnent une passion pour l'art et l'excellence, tout en reflétant l'art de la haute joaillerie.</li>
+              <li> En somme, Dior Joaillerie incarne l'apogée du raffinement dans le monde des bijoux, où chaque création devient une œuvre d'art à chérir pour l'éternité.</li>
+            </ul>
+            <figure class="bg-light p-4 p-lg-5 text-center mb-5">
+              <blockquote class="blockquote">
+                <p class="h4 mb-5">« Quoique vous fassiez, faites-le avec passion. Vivez avec passion. » .</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                <cite class="fst-normal" title="Source Title">Christian Dior</cite>
+              </figcaption>
+            </figure>
+            <p class="mb-5">Les bijoux Dior représentent le summum du luxe et de l'élégance. Cette prestigieuse maison de couture propose une gamme de bijoux de haute qualité, alliant savoir-faire artisanal et créativité. Les bijoux Dior sont caractérisés par leur élégance intemporelle, leurs designs exquis et l'utilisation de matériaux de premier ordre. Les bagues, colliers, boucles d'oreilles et bracelets Dior sont souvent ornés de pierres précieuses et conçus avec une attention méticuleuse aux détails. Chaque pièce incarne la féminité, la sophistication et l'innovation, et devient ainsi bien plus qu'un simple accessoire de mode, mais une véritable œuvre d'art à chérir pour l'éternité. Dior Joaillerie reste une icône de l'art joaillier, captivant les amateurs de bijoux du monde entier avec son style raffiné et son héritage de haute couture.</p>
+            <!-- Post tags-->
+            <div class="d-flex align-items-center flex-column flex-sm-row mb-4 p-4 bg-light">
+              <h3 class="h4 mb-3 mb-sm-0">Tags</h3>
+              <ul class="list-inline mb-0 ms-0 ms-sm-3">
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">haute joaillerie</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">dior</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">designer</a></li>
+                <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">fashion</a></li>
+              </ul>
+            </div>
+            <!-- Post share-->
+            <div class="d-flex align-items-center flex-column flex-sm-row mb-5 p-4 bg-light">
+              <h3 class="h4 mb-3 mb-sm-0">Share this post</h3>
+              <ul class="list-inline mb-0 ms-0 ms-sm-3">
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share facebook" href="#!"><i class="fab me-2 fa-facebook-f"></i>Share</a></li>
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share twitter" href="#!"><i class="fab me-2 fa-twitter"></i>Tweet</a></li>
+                <li class="list-inline-item me-1 my-1"><a class="social-link-share instagram" href="#!"><i class="fab me-2 fa-instagram"></i>Share</a></li>
+              </ul>
+            </div>
+            <!-- Leave comment-->
+            <h3 class="h4 mb-4">Leave a comment</h3>
+            <form class="mb-5">
+              <div class="row gy-3">
+                <div class="col-lg-6">
+                  <input class="form-control" type="text" name="name" placeholder="Full Name e.g. Jason Doe">
+                </div>
+                <div class="col-lg-6">
+                  <input class="form-control" type="email" name="email" placeholder="Email Address e.g. Jason@email.com">
+                </div>
+                <div class="col-lg-12">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Leave your message"></textarea>
+                </div>
+                <div class="col-lg-12">
+                  <button class="btn btn-primary" type="submit">Submit your comment</button>
+                </div>
+              </div>
+            </form>
+            <!-- Post comments-->
+            <h3 class="h4 mb-4">Comments</h3>
+            <ul class="list-unstyled comments">
+              <li>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-1.jpg" alt="Jimmy Roy" width="60"/></div>
+                  <div class="ms-3">
+                    <p class="small mb-0 text-primary fw-normal">15 Aug 2019</p>
+                    <h5>Jimmy Roy</h5>
+                    <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                  </div>
+                </div>
+                <ul class="list-unstyled ms-5">
+                  <li> 
+                    <div class="d-flex mb-4">
+                      <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-2.jpg" alt="Melissa Johanson" width="60"/></div>
+                      <div class="ms-3">
+                        <p class="small mb-0 text-primary fw-normal">15 Sep 2019</p>
+                        <h5>Melissa Johanson</h5>
+                        <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0"><img class="rounded-circle shadow-sm img-fluid" src="img/person-3.jpg" alt="David Nguyen" width="60"/></div>
+                  <div class="ms-3">
+                    <p class="small mb-0 text-primary fw-normal">10 Oct 2019</p>
+                    <h5>David Nguyen</h5>
+                    <p class="text-muted text-sm mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.</p><a class="reset-anchor text-sm" href="#!"><i class="fas fa-share me-2 text-primary"></i><strong>Reply</strong></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Blog sidebar-->
+          <div class="col-lg-3">
+            <!-- About category-->
+            <div class="card bg-light mb-4 py-lg-4">
+              <div class="card-body text-center">
+                <h2 class="h3 mb-3">About me</h2><img class="rounded-circle mb-3" src="{{ asset('../../../images/aboutmefatou.jpg') }}" alt="..." width="100">
+                <p class="text-sm text-muted">La créativité est une force qui peut inspirer, éduquer et unir. Je suis impatiente de voir comment cette communauté grandit et s'épanouit au fil du temps. N'hésitez pas à me contacter, à partager vos idées et à contribuer à cette aventure artistique. Ensemble, nous pouvons faire de grandes choses."</p>
+                <ul class="list-inline small mb-0 text-dark">
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Recent posts-->
+            <!-- Recent posts-->
+             <!-- Recent posts-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Recent posts</h2>
+                <div class="d-flex mb-3"><a class="flex-shrink-0" href="post.html"><img class="img-fluid" src="img/recent-post-1.jpg" alt="" width="70"></a>
+                  <div class="ms-3">
+                    <h6> <a class="reset-anchor" href="{{ path('app_blogfatouma') }}"  >Fatouma, Formée à l'École Descodeuses, Partage son Expertise : Le Digital Design Révolutionne la Bijouterie  </a></h6>
+                    <p class="text-sm text-muted lh-sm mb-0">Dans cet article, Fatouma nous plonge au cœur de son univers artistique, nous dévoilant en détail la conception de ses œuvres de bijouterie grâce au digital. Elle nous livre sa philosophie unique sur la création, révélant comment elle transforme sa vision en magnifiques créations. Découvrez son processus créatif, les défis qu'elle relève et les inspirations qui nourrissent son art.</p>
+                  </div>
+                </div>
+               
+               
+              </div>
+             </div>
+                 
+            <!-- Categories-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Trending categories</h2><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-1.jpg)" href="#!"><span class="category-block-title">bijouterie </span></a><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-2.jpg)" href="#!"><span class="category-block-title">Fashion</span></a><a class="category-block category-block-sm bg-center bg-cover mb-2" style="background: url(img/category-bg-3.jpg)" href="#!"><span class="category-block-title">designer</span></a>
+              </div>
+            </div>
+            <!-- Tags-->
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <h2 class="h5 mb-3">Tags cloud</h2>
+                <ul class="list-inline">
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Art</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">designer</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">bijouterie</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">dior</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">haute joaillerie</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Inspiration</a></li>
+                  <li class="list-inline-item my-1 me-2"><a class="sidebar-tag-link" href="#!">Business</a></li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-4" style="background: #111">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-lg-start"><img src="img/logo-footer.svg" alt="..." width="120"></div>
+          <div class="col-md-4 text-center">
+            <div class="d-flex align-items-center flex-wrap justify-content-center">
+              <h6 class="text-muted mb-0 py-2 me-3">Follow me<span class="ms-3">-</span></h6>
+              <ul class="list-inline small mb-0 text-white">
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
+                <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 text-lg-end">
+            <p class="mb-0 text-muted text-sm text-heading">Template designed by <a href="https://bootstrapious.com/p/juliette-bootstrap-feminine-blog-template" class="text-primary">Bootstrapious</a>. </p>
+            <!-- If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!-->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="js/front.js"></script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>
+
+
+
+
+
+{% endblock %}

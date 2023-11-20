@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\GalerieRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\User;
 use ApiPlatform\Core\Annotation\ApiResource;
@@ -40,8 +42,19 @@ class Galerie
     #[ORM\Column(length: 255)]
     private ?string $titreimage = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $user = null;
+  
+
+    #[ORM\OneToMany(mappedBy: 'parent', targetEntity: Illustration::class)]
+    private Collection $illustrations;
+
+    #[ORM\ManyToOne(inversedBy: 'galeries')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?user $user = null;
+
+    public function __construct()
+    {
+        $this->illustrations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -148,22 +161,52 @@ class Galerie
 
     
 
-    /**
-     * @ORM\OneToOne(targetEntity=User::class, inversedBy="galerie")
-     * @ORM\JoinColumn(nullable=false)
-     */
+    
+     
  
 
     
 
-    public function getUser(): ?User
+    
+    /**
+     * @return Collection<int, Illustration>
+     */
+    public function getIllustrations(): Collection
+    {
+        return $this->illustrations;
+    }
+
+    public function addIllustration(Illustration $illustration): static
+    {
+        if (!$this->illustrations->contains($illustration)) {
+            $this->illustrations->add($illustration);
+            $illustration->setParent($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIllustration(Illustration $illustration): static
+    {
+        if ($this->illustrations->removeElement($illustration)) {
+            // set the owning side to null (unless already changed)
+            if ($illustration->getParent() === $this) {
+                $illustration->setParent(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getUser(): ?user
     {
         return $this->user;
     }
 
-    public function setUser(?User $user): self
+    public function setUser(?user $user): static
     {
         $this->user = $user;
+
         return $this;
     }
 

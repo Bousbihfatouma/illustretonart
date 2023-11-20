@@ -1,0 +1,291 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FatoumagalerieController!{% endblock %}
+
+
+
+{% block body %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+ <div class="container">
+         <div class="row">
+            <div class="col-lg-12 text-center my-2">
+                <h2>Bienvenue dans la galerie de Fatouma</h2>
+            </div>
+         </div>
+         <div class="portfolio-menu mt-2 mb-4">
+            <ul>
+               <li class="btn btn-outline-dark active" data-filter="*"><a href="{{ path('app_galeriedigitalbijoux') }}">All designer bijouterie</li>
+               <li class="btn btn-outline-dark" data-filter=".lettre">A</li>
+               <li class="btn btn-outline-dark" data-filter=".lettre">B</li>
+               <li class="btn btn-outline-dark text" data-filter=".lettre">C</li>
+               <li class="btn btn-outline-dark text" data-filter=".lettre">D</li>
+               <li class="btn btn-outline-dark text" data-filter=".lettre">E</li>
+              <li class="btn btn-outline-dark text" data-filter=".lettre"> <a href="{{ path('app_fatoumagalerie') }}">F</a>
+</li>
+
+                <li class="btn btn-outline-dark text" data-filter=".lettre">G</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">H</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">I</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">J</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">K</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">L</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">M</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">N</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">O</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">P</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">Q</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">R</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">S</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">T</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">U</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">w</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">X</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">Y</li>
+                <li class="btn btn-outline-dark text" data-filter=".lettre">Z</li>
+
+
+
+
+            </ul>
+         </div>
+         <div class="portfolio-item row">
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="{{ asset('../../../images/bijoux1desertblanc.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/bijoux1desertblanc.jpg') }}" alt="bijoux desert 1">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="{{ asset('../../../images/bijoux2desertblanc.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/bijoux2desertblanc.jpg') }}" alt="bijoux desert 2">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                 <a href="{{ asset('../../../images/bijoux3desertblanc.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/bijoux3desertblanc.jpg') }}" alt="bijoux desert 3">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="{{ asset('../../../images/vert.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/vert.jpg') }}" alt="bijoux vert">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                   <a href="{{ asset('../../../images/oeuvre1fatou.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/oeuvre1fatou.jpg') }}" alt="bijoux vert">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="{{ asset('../../../images/foret.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/foret.jpg') }}" alt="bijoux vert">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="{{ asset('../../../images/bambou.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/bambou.jpg') }}" alt="bijoux vert">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+                <a href="{{ asset('../../../images/cotton.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/cotton.jpg') }}" alt="bijoux vert">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="{{ asset('../../../images/lavande.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/lavande.jpg') }}" alt="lavande">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="{{ asset('../../../images/nenuphar.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/nenuphar.jpg') }}" alt="nenuphar">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                 <a href="{{ asset('../../../images/papillon.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/papillon.jpg') }}" alt="papillon">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="{{ asset('../../../images/petitefleur.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/petitefleur.jpg') }}" alt="petitefleur">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="{{ asset('../../../images/petitefleur2.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/petitefleur2.jpg') }}" alt="petitefleur2">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="{{ asset('../../../images/aloe.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/aloe.jpg') }}" alt="aloeverra">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="{{ asset('../../../images/aloe2.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/aloe2.jpg') }}" alt="aloeverra">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+            <a href="{{ asset('../../../images/paon.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/paon.jpg') }}" alt="paon">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="{{ asset('../../../images/cristaux.jpg') }}" class="fancylight popup-btn" data-fancybox-group="light">
+              <img class="img-fluid" src="{{ asset('../../../images/cristaux.jpg') }}" alt="cristaux">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+             
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+             
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+             
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+             
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+             
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+             
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+             
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-6 col-sm">
+              
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+             
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+              
+               </a>
+            </div>
+         </div>
+      </div>
+      
+      <script>
+       $('.portfolio-menu ul li').click(function(){
+         	$('.portfolio-menu ul li').removeClass('active');
+         	$(this).addClass('active');
+         	
+         	var selector = $(this).attr('data-filter');
+         	$('.portfolio-item').isotope({
+         		filter:selector
+         	});
+         	return  false;
+         });
+         $(document).ready(function() {
+         var popup_btn = $('.popup-btn');
+         popup_btn.magnificPopup({
+         type : 'image',
+         gallery : {
+         	enabled : true
+         }
+         });
+         });
+         </script>
+
+
+
+  
+{% endblock %}
+
+
+ 
+
+
+   
+    
+
+
+  
+
+
+
+
+
+    
+
+
+
+
+
+
+
